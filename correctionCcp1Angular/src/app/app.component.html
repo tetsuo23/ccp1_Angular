@@ -1,39 +1,209 @@
-<h1>hello world</h1>
+<nav class="nav">
+  <div class="container" id="nav1">
+    <div class="logo col-md-2 col-4">
+      <a href="#">
+        <img src="../assets/img/logo2.png" class="img-fluid" id="logo" alt="logo" srcset="../assets/img/logo2.png 1x"></a>
+    </div>
+    <div id="mainListDiv" class="main_list col-md-3 col-6">
+      <ul class="navlinks ">
+        <li>
 
-<ul ngbNav #nav="ngbNav" [activeId]="2" class="nav-tabs justify-content-center">
-    <li [ngbNavItem]="1">
-        <a ngbNavLink>Simple</a>
-        <ng-template ngbNavContent>
-            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.
-                Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-        </ng-template>
-    </li>
-    <li [ngbNavItem]="2">
-        <a ngbNavLink><b>Fancy</b> title</a>
-        <ng-template ngbNavContent>
-            <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR.
-                Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical
-                culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
-        </ng-template>
-    </li>
-    <li ngbDropdown class="nav-item">
-        <a href (click)="false" class="nav-link" ngbDropdownToggle>Dropdown</a>
-        <div ngbDropdownMenu>
-            <button ngbDropdownItem>Action</button>
-            <button ngbDropdownItem>Another action</button>
-            <button ngbDropdownItem>Something else here</button>
-            <div class="dropdown-divider"></div>
-            <button ngbDropdownItem>Separated link</button>
-        </div>
-    </li>
-    <li ngbNavItem [disabled]="true" class="ml-auto">
-        <a ngbNavLink>Disabled</a>
-        <ng-template ngbNavContent>
-            <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi. Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio. Duis pharetra et
-                nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices et. Sed diam urna, egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus nisl enim, nec tristique ipsum euismod facilisis.
-                Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem aliquet ultricies in eget neque. Phasellus nec tortor vel tellus pulvinar feugiat.</p>
-        </ng-template>
-    </li>
-</ul>
+          <a href="https://twitter.com/">
+            <img src="../assets/img/twitter.png" class="img-fluid" id="search" alt="twitter" srcset="../assets/img/twitter.png 1x">
+          </a>
+        </li>
+        <li><a href="https://www.facebook.com/"><img src="../assets/img/facebook.png" class="img-fluid" id="search" alt="facebook" srcset="../assets/img/facebook.png 1x"></a>
+        </li>
+        <li><a href="https://fr.linkedin.com/"><img src="../assets/img/linkedin.png" class="img-fluid" id="search" alt="linkedin" srcset="../assets/img/linkedin.png 1x"></a>
+        </li>
+        <li><a href="https://www.youtube.com/"><img src="../assets/img/youtube.png" class="img-fluid" id="search" alt="youtube" srcset="../assets/img/youtube.png 1x"></a>
+        </li>
+        <li><a href="#"><img src="../assets/img/.png" class="img-fluid" id="menu-burger" alt="menu" srcset="../assets/img/burger.png 1x">
+          </a>
+        </li>
 
-<div [ngbNavOutlet]="nav" class="mt-2"></div>
+      </ul>
+    </div>
+    <span class="navTrigger d-none d-sm-block col-md-9">
+      <h1 id="titre"><strong>Webmag-agency</strong></h1>
+    </span>
+  </div>
+
+  <!-- ---------------------------- deuxième menu horizontal-------------------- -->
+
+  <div class="container" id="nav3">
+
+    <div id="mainListDiv" class="main_list">
+    </div>
+
+  </div>
+</nav>
+<!-- menu vertical droite -->
+
+<div id="nav2" class="navbar justify-content-center">
+  <!-- <nav class="navbar col-2 "> -->
+  <a href="#" onclick="apparait()">
+    <img src="../assets/img/search.png" class="img-fluid search_menu" id="search" alt="" srcset="../assets/img/search.png"></a>
+  <a class="nav-link" href="#" onclick="block()">
+    <img src="../assets/img/point_menu.png" class="img-fluid point_menu" id="" alt="point_menu" srcset="../assets/img/point_menu.png 1x"></a>
+  <a class="nav-link" href="#" onclick="block2()">
+    <img src="../assets/img/point_menu.png" class="img-fluid point_menu" id="" alt="point_menu" srcset="../assets/img/point_menu.png 1x"></a>
+  <a class="nav-link" href="#" onclick="block3()">
+    <img src="../assets/img/point_menu.png" class="img-fluid point_menu" id="" alt="point_menu" srcset="../assets/img/point_menu.png 1x"></a>
+  <a class="nav-link" href="#" onclick="block4()">
+    <img src="../assets/img/point_menu.png" class="img-fluid point_menu" id="" alt="point_menu" srcset="../assets/img/point_menu.png 1x"></a>
+
+
+
+  <!-- </nav> -->
+</div>
+<div id="search_bar">
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search">
+    <button class="btn btn-secondary" type="submit">Chercher</button>
+  </form>
+</div>
+<!-- ----------------------------------------------BURGER----------------------------------- -->
+<div class="overlay overlay-contentpush">
+  <!-- effet ici -->
+  <button type="button" class="overlay-close">Close</button>
+  <nav>
+    <ul>
+      <li><a href="#">Nos réalisations</a></li>
+      <li><a href="#">Annuaire</a></li>
+      <li><a href="#">Agenda</a></li>
+      <li><a href="#">Evenements</a></li>
+      <li><a href="#">Co-working</a></li>
+    </ul>
+  </nav>
+</div>
+<!-- ------------------------------------------FIN BURGER----------------------------------- -->
+
+
+<app-accueil></app-accueil>
+
+<!-- Footer -->
+<footer class="page-footer font-small indigo">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Very long link 1</a>
+          </li>
+          <li>
+            <a href="#!">Very long link 2</a>
+          </li>
+          <li>
+            <a href="#!">Very long link 3</a>
+          </li>
+          <li>
+            <a href="#!">Very long link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mx-auto">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!">Link 1</a>
+          </li>
+          <li>
+            <a href="#!">Link 2</a>
+          </li>
+          <li>
+            <a href="#!">Link 3</a>
+          </li>
+          <li>
+            <a href="#!">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->

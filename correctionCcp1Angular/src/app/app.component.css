@@ -1,0 +1,368 @@
+ngb-carousel {
+  max-width: 700px;
+  margin: 50px auto;
+}
+
+ngb-carousel img {
+  width: 100%;
+  outline: none;
+}
+
+ngb-carousel {
+  width: inherit;
+  height: inherit;
+}
+
+.carousel-inner {
+  overflow: visible;
+}
+
+.carousel-item {
+  display: flex !important;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.2s ease-in-out, visibility 1.2s;
+  z-index: -1;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+
+.carousel-control-prev {
+  z-index: 20;
+}
+
+
+.carousel-control-next {
+  z-index: 20;
+}
+
+.carousel-indicators {
+  z-index: 20;
+}
+
+/* burger */
+
+/* Overlay style */
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(153, 204, 51, 0.9);
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  overflow: hidden;
+  border: none;
+  background: url(../assets/img/cross.png) no-repeat center center;
+  text-indent: 200%;
+  color: transparent;
+  outline: none;
+  z-index: 100;
+}
+
+/* Menu style */
+.overlay nav {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  height: 60%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  height: 100%;
+  position: relative;
+}
+
+.overlay ul li {
+  display: block;
+  height: 20%;
+  height: calc(100% / 5);
+  min-height: 54px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.overlay ul li a {
+  font-size: 54px;
+  font-weight: 300;
+  display: block;
+  color: #fff;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+  color: #f0f0f0;
+}
+
+/* Effects */
+/* html,
+body {
+  overflow: hidden;
+} */
+
+.container {
+  /* overflow: hidden; */
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+}
+
+.container.overlay-open {
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+.container::after {
+  content: '';
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-transition: opacity 0.5s, visibility 0s 0.5s;
+  transition: opacity 0.5s, visibility 0s 0.5s;
+}
+
+.container.overlay-open::after {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.overlay-contentpush {
+  background: rgb(187, 7, 52);
+  visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.5s, visibility 0s 0.5s;
+  transition: transform 0.5s, visibility 0s 0.5s;
+
+  height: 70vh;
+  width: 70vw;
+}
+
+.overlay-contentpush.open {
+  visibility: visible;
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  z-index: 9999;
+}
+
+@media screen and (max-height: 30.5em) {
+  .overlay nav {
+    height: 70%;
+    font-size: 34px;
+  }
+
+  .overlay ul li {
+    min-height: 34px;
+  }
+}
+
+/* fin du burger */
+
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url(../assets/img/3d-low-poly-abstract-background-with-connecting-lines-dots_1048-10499.jpg);
+  overflow: hidden;
+  font-family: 'Quicksand';
+  /* !!! important imposé par le cahier des charges */
+  /* -------------------------------------- */
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 22px;
+  color: #fff;
+  position: absolute;
+  top: 32%;
+  left: 40%;
+}
+
+h2 {
+  text-align: center;
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+
+#page {
+  height: 100vh;
+  margin-bottom: 45%;
+  overflow-y: scroll;
+}
+
+#titre {
+  transform: translateX(-50%);
+}
+
+/* -------------------------------------- */
+.nav {
+  width: 100%;
+  height: 15%;
+  position: fixed;
+  line-height: 65px;
+  text-align: center;
+  vertical-align: middle;
+  background-color: #00000066;
+  z-index: 999;
+}
+
+.nav div.logo {
+  float: left;
+  width: auto;
+  height: auto;
+  padding-left: 0rem;
+}
+
+#logo {
+  width: 100%;
+  min-width: 108px;
+}
+
+
+
+
+
+.nav div.main_list {
+  height: 64px;
+  float: right;
+}
+
+.nav div.main_list ul {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  list-style: none;
+  /*! padding-right: 3em; */
+  padding: 0;
+}
+
+.nav div.main_list ul li {
+  width: auto;
+  height: 65px;
+  padding: 0;
+  padding-right: 2rem;
+}
+
+.nav div.main_list ul li a {
+  text-decoration: none;
+  color: #fff;
+  line-height: 65px;
+  font-size: 1.5rem;
+}
+
+
+/* modification de la première nav pour coller le logo à gauche */
+#nav1,
+#nav3 {
+  margin-left: 0;
+  margin-right: 0;
+  padding-right: 5.2%;
+  max-width: 100%;
+}
+
+#nav1,
+#nav2,
+#nav3 {
+  position: fixed;
+}
+
+#nav1 {
+  height: 64px;
+  z-index: 9999;
+}
+
+#nav2 {
+
+  right: 0;
+  height: 100%;
+  width: 5%;
+  /*! max-width: 5%; */
+  min-width: 5rem;
+  background-color: #00000066;
+  padding-top: 7%;
+
+  /*! padding-bottom: 7%; */
+}
+
+#nav3 {
+  background-color: #ffffff11;
+  z-index: 2;
+  height: 10%;
+}
+
+.navbar-nav {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.navbar {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  padding-bottom: 7%;
+  /*! padding-left: 1%; */
+  /*! padding-right: 1%; */
+  justify-content: center;
+}
+
+.nav-link {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.navTrigger {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  height: 65px;
+  letter-spacing: 1em;
+  font-weight: bold;
+}
+
+.point_menu {
+  max-width: 2em;
+}
+
+
+
+.search_menu {
+  max-width: 2em;
+}
