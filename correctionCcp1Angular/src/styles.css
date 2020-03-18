@@ -3,3 +3,10 @@ html,
 body {
   background-image: url(assets/img/background-abstract-1065003_1280.jpg);
 }
+
+@media screen and (min-width:961px) {
+  .carousel-indicators {
+    position: absolute;
+    bottom: -2%;
+  }
+}

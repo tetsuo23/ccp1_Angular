@@ -1,50 +1,51 @@
-<nav class="nav">
-  <div class="container" id="nav1">
-    <div class="logo col-md-2 col-2">
-      <a href="#">
-        <img src="../assets/img/logo2.png" class="img-fluid" id="logo" alt="logo" srcset="../assets/img/logo2.png 1x"></a>
+<div class="container-fluid" id="page1">
+  <nav class="nav">
+    <div class="container" id="nav1">
+      <div class="logo col-md-2 col-2">
+        <a href="#">
+          <img src="../assets/img/logo2.png" class="img-fluid" id="logo" alt="logo" srcset="../assets/img/logo2.png 1x"></a>
+      </div>
+      <div id="mainListDiv" class="main_list col-md-4 col-9">
+        <ul class="navlinks ">
+          <li>
+
+            <a href="https://twitter.com/">
+              <img src="../assets/img/twitter.png" class="img-fluid icone" alt="twitter" srcset="../assets/img/twitter.png 1x">
+            </a>
+          </li>
+          <li><a href="https://www.facebook.com/"><img src="../assets/img/facebook.png" class="img-fluid icone" alt="facebook" srcset="../assets/img/facebook.png 1x"></a>
+          </li>
+          <li><a href="https://fr.linkedin.com/"><img src="../assets/img/linkedin.png" class="img-fluid icone" alt="linkedin" srcset="../assets/img/linkedin.png 1x"></a>
+          </li>
+          <li><a href="https://www.youtube.com/"><img src="../assets/img/youtube.png" class="img-fluid icone" alt="youtube" srcset="../assets/img/youtube.png 1x"></a>
+          </li>
+          <li><a href="#"><img src="../assets/img/.png" class="img-fluid icone" id="menu-burger" alt="menu" srcset="../assets/img/burger.png 1x">
+            </a>
+          </li>
+          <li>
+            <a href="#" onclick="apparait()">
+              <img src="../assets/img/search.png" class="img-fluid search_menu icone" id="search" alt="" srcset="../assets/img/search.png"></a>
+          </li>
+
+        </ul>
+      </div>
+      <span class="navTrigger d-none d-sm-block col-md-12">
+        <h1 id="titre"><strong>Webmag-agency</strong></h1>
+      </span>
     </div>
-    <div id="mainListDiv" class="main_list col-md-3 col-9">
-      <ul class="navlinks ">
-        <li>
 
-          <a href="https://twitter.com/">
-            <img src="../assets/img/twitter.png" class="img-fluid icone" alt="twitter" srcset="../assets/img/twitter.png 1x">
-          </a>
-        </li>
-        <li><a href="https://www.facebook.com/"><img src="../assets/img/facebook.png" class="img-fluid icone" alt="facebook" srcset="../assets/img/facebook.png 1x"></a>
-        </li>
-        <li><a href="https://fr.linkedin.com/"><img src="../assets/img/linkedin.png" class="img-fluid icone" alt="linkedin" srcset="../assets/img/linkedin.png 1x"></a>
-        </li>
-        <li><a href="https://www.youtube.com/"><img src="../assets/img/youtube.png" class="img-fluid icone" alt="youtube" srcset="../assets/img/youtube.png 1x"></a>
-        </li>
-        <li><a href="#"><img src="../assets/img/.png" class="img-fluid icone" id="menu-burger" alt="menu" srcset="../assets/img/burger.png 1x">
-          </a>
-        </li>
-        <li>
-          <a href="#" onclick="apparait()">
-            <img src="../assets/img/search.png" class="img-fluid search_menu icone" id="search" alt="" srcset="../assets/img/search.png"></a>
-        </li>
+    <!-- ---------------------------- deuxième menu horizontal-------------------- -->
 
-      </ul>
-    </div>
-    <span class="navTrigger d-none d-sm-block col-md-9">
-      <h1 id="titre"><strong>Webmag-agency</strong></h1>
-    </span>
-  </div>
-
-  <!-- ---------------------------- deuxième menu horizontal-------------------- -->
-
-  <!-- <div class="container" id="nav3">
+    <!-- <div class="container" id="nav3">
 
     <div id="mainListDiv" class="main_list">
     </div>
 
   </div>-->
-</nav>
-<!-- menu vertical droite -->
+  </nav>
+  <!-- menu vertical droite -->
 
-<!--<div id="nav2" class="navbar justify-content-center">
+  <!--<div id="nav2" class="navbar justify-content-center">
   <nav class="navbar col-2 "> 
   
   <a class="nav-link" href="#" onclick="block()">
@@ -60,33 +61,34 @@
 
 </nav> 
 </div>-->
-<!--<div id="search_bar">
+  <!--<div id="search_bar">
   <form class="form-inline">
     <input class="form-control mr-sm-2" type="search" placeholder="Search">
     <button class="btn btn-secondary" type="submit">Chercher</button>
   </form>
 </div>-->
-<!-- ----------------------------------------------BURGER----------------------------------- -->
-<div class="overlay overlay-contentpush">
-  <!-- effet ici -->
-  <button type="button" class="overlay-close">Close</button>
-  <nav>
-    <ul>
-      <li><a href="#">Nos réalisations</a></li>
-      <li><a href="#">Annuaire</a></li>
-      <li><a href="#">Agenda</a></li>
-      <li><a href="#">Evenements</a></li>
-      <li><a href="#">Co-working</a></li>
-    </ul>
-  </nav>
+  <!-- ----------------------------------------------BURGER----------------------------------- -->
+  <div class="overlay overlay-contentpush">
+    <!-- effet ici -->
+    <button type="button" class="overlay-close">Close</button>
+    <nav>
+      <ul>
+        <li><a href="#">Nos réalisations</a></li>
+        <li><a href="#">Annuaire</a></li>
+        <li><a href="#">Agenda</a></li>
+        <li><a href="#">Evenements</a></li>
+        <li><a href="#">Co-working</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- ------------------------------------------FIN BURGER----------------------------------- -->
+
+
+  <app-accueil></app-accueil>
 </div>
-<!-- ------------------------------------------FIN BURGER----------------------------------- -->
-
-
-<app-accueil></app-accueil>
 
 <!-- Footer -->
-<footer class="page-footer font-small indigo" id="page2">
+<footer class="page-footer font-small indigo" id="pageEnd">
 
   <!-- Footer Links -->
   <div class="container text-center text-md-left">
