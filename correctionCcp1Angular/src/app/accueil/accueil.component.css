@@ -86,3 +86,15 @@ button {
     margin-left: 3.5%;
   }
 }
+
+@media screen and (min-width:1280px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  #button {
+    position: relative;
+    bottom: -20%;
+    margin-left: 2.5%
+  }
+}
