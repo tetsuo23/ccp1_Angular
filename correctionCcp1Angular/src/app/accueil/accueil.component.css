@@ -28,22 +28,18 @@ ngb-carousel {
 .carousel-item.active {
   opacity: 1;
   visibility: visible;
-  z-index: 10;
+
 }
 
-.carousel-control-prev {
-  z-index: 20;
-}
+.carousel-control-prev {}
 
 
-.carousel-control-next {
-  z-index: 20;
-}
+.carousel-control-next {}
 
 
 
 .carousel-caption {
-  z-index: 20;
+
   position: absolute;
   bottom: 25%;
 }
@@ -63,4 +59,30 @@ button {
 
 .btn-secondary:hover {
   background-color: rgb(187, 7, 52);
+}
+
+@media screen and (min-width:961px) {
+  ngb-carousel {
+    max-width: 700px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+  }
+
+  .carousel-caption {
+
+    position: absolute;
+    bottom: 35%;
+  }
+
+  .carousel-indicators {
+    position: absolute;
+    bottom: 2%;
+  }
+
+  #button {
+    bottom: 10%;
+    margin-left: 3.5%;
+  }
 }
