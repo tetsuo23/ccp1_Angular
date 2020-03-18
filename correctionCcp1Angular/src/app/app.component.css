@@ -194,13 +194,12 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: url(../assets/img/3d-low-poly-abstract-background-with-connecting-lines-dots_1048-10499.jpg);
-  overflow: hidden;
+  height: 100%;
+  background-image: url(../assets/img/background-abstract-1065003_1280.jpg);
   font-family: 'Quicksand';
-  /* !!! important imposé par le cahier des charges */
-  /* -------------------------------------- */
   font-size: 14px;
 }
+
 
 h1 {
   font-size: 22px;
@@ -223,6 +222,10 @@ h2 {
   overflow-y: scroll;
 }
 
+#page2 {
+  height: 100vh;
+}
+
 #titre {
   transform: translateX(-50%);
 }
@@ -239,6 +242,10 @@ h2 {
   z-index: 999;
 }
 
+.nav_scroll {
+  background-color: rgb(156, 155, 155);
+}
+
 .nav div.logo {
   float: left;
   width: auto;
@@ -248,7 +255,7 @@ h2 {
 
 #logo {
   width: 100%;
-  min-width: 108px;
+  min-width: 75px;
 }
 
 
@@ -258,6 +265,7 @@ h2 {
 .nav div.main_list {
   height: 64px;
   float: right;
+  padding-top: 0;
 }
 
 .nav div.main_list ul {
@@ -273,14 +281,22 @@ h2 {
   width: auto;
   height: 65px;
   padding: 0;
-  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 .nav div.main_list ul li a {
   text-decoration: none;
   color: #fff;
-  line-height: 65px;
+  line-height: 60px;
   font-size: 1.5rem;
+
+}
+
+.icone {
+  vertical-align: top;
+  margin-top: 22%;
+  height: 40%;
+
 }
 
 
@@ -289,7 +305,7 @@ h2 {
 #nav3 {
   margin-left: 0;
   margin-right: 0;
-  padding-right: 5.2%;
+  padding: 0;
   max-width: 100%;
 }
 

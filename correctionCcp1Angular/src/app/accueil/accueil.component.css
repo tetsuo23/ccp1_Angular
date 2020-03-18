@@ -1,6 +1,6 @@
 ngb-carousel {
   max-width: 700px;
-  margin: 50px auto;
+  margin: 0;
 }
 
 ngb-carousel img {
@@ -40,6 +40,27 @@ ngb-carousel {
   z-index: 20;
 }
 
-.carousel-indicators {
+
+
+.carousel-caption {
   z-index: 20;
+  position: absolute;
+  bottom: 25%;
+}
+
+#button {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  margin-left: 2%;
+}
+
+button {
+  height: 75%;
+  display: flex;
+  align-items: center;
+}
+
+.btn-secondary:hover {
+  background-color: rgb(187, 7, 52);
 }
