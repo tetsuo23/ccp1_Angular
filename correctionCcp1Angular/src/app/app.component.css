@@ -201,7 +201,6 @@ body {
   overflow-x: hidden;
 }
 
-
 h1 {
   font-size: 22px;
   color: #fff;
@@ -226,7 +225,23 @@ h2 {
 }
 
 #page2 {
-  height: 100vh;
+  height: 100%;
+  margin-top: 100vh;
+
+}
+
+#page10 {
+  position: relative;
+  height: 100%;
+  padding: 0;
+  top: 1200px;
+}
+
+#pageEnd {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  background-color: rgb(124, 122, 122);
 }
 
 #titre {
@@ -236,7 +251,7 @@ h2 {
 /* -------------------------------------- */
 .nav {
   width: 100%;
-  height: 100px;
+  height: 55px;
   position: fixed;
   line-height: 65px;
   text-align: center;
@@ -261,10 +276,6 @@ h2 {
   min-width: 75px;
 }
 
-
-
-
-
 .nav div.main_list {
   height: 64px;
   float: right;
@@ -283,9 +294,10 @@ h2 {
 
 .nav div.main_list ul li {
   width: auto;
-  height: 90px;
+  height: 75px;
   padding: 0;
-  padding-left: 2rem;
+  padding-left: 1rem;
+  top: 10px;
 }
 
 .nav div.main_list ul li a {
@@ -303,7 +315,6 @@ h2 {
   z-index: 5;
 
 }
-
 
 /* modification de la première nav pour coller le logo à gauche */
 #nav1,
@@ -379,40 +390,90 @@ h2 {
   font-weight: bold;
 }
 
-.point_menu {
-  max-width: 2em;
+.nav_button {
+  position: absolute;
+  top: 115%;
+  height: 100vh;
 }
 
+.button_nav {
+  height: 30vh;
+  padding-left: 0;
+  padding-right: 30px;
+}
 
+.btn-secondary {
+  background-color: rgb(124, 122, 122);
+  box-shadow: 1px 1px 10px #fff;
+}
+
+a {
+  color: rgb(235, 235, 235)
+}
 
 /* .search_menu {
   max-width: 2em;
 } */
 
 @media screen and (min-width:961px) {
+  .nav {
+    height: 80px;
+  }
+
   .nav div.main_list {
     padding-top: 2%;
   }
 
   .nav div.main_list ul li {
     padding-left: 1.5rem;
+    height: 75px;
   }
 
-  #titre {
-    padding-left: 5rem;
-  }
-
-  #page1 {
+  /* #page1 {
     height: 100vh;
     margin-bottom: 45%;
     overflow-y: scroll;
     padding: 0;
+  } */
+  #page1 {
+    margin: 0;
+    height: 30vh;
+  }
+
+  #page2 {
+    margin-top: 26vh;
+  }
+
+  .nav_button {
+    top: 22%;
   }
 }
 
 
 @media screen and (min-width:1280px) {
-  #card {
-    margin: 15% 0 10% 0;
+  h1 {
+    top: 50%;
   }
+
+  .nav {
+    height: 100px;
+    z-index: 999;
+  }
+
+  #page1 {
+    margin: 0;
+    height: 30vh;
+  }
+
+  #page2 {
+    margin-top: 38vh;
+
+  }
+
+  .nav_button {
+    background-color: rgb(124, 122, 122);
+
+  }
+
+  .nav_button:hover {}
 }

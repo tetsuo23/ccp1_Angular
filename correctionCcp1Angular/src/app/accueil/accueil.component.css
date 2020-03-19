@@ -1,6 +1,13 @@
-ngb-carousel {
+/* ngb-carousel {
   max-width: 700px;
   margin: 0;
+} */
+ngb-carousel {
+  max-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+
 }
 
 ngb-carousel img {
@@ -31,15 +38,7 @@ ngb-carousel {
 
 }
 
-.carousel-control-prev {}
-
-
-.carousel-control-next {}
-
-
-
 .carousel-caption {
-
   position: absolute;
   bottom: 25%;
 }
@@ -57,33 +56,61 @@ button {
   align-items: center;
 }
 
-.btn-secondary:hover {
-  background-color: rgb(187, 7, 52);
+.btn-secondary {
+  background-color: rgb(124, 122, 122);
 }
 
 @media screen and (min-width:961px) {
   ngb-carousel {
     max-width: 700px;
     position: relative;
-    top: 50%;
+    top: -6%;
     left: 50%;
     transform: translate(-50%, -40%);
   }
 
   .carousel-caption {
-
     position: absolute;
     bottom: 35%;
   }
 
   .carousel-indicators {
     position: absolute;
-    bottom: 2%;
+    top: -7%;
+    z-index: 999;
+  }
+
+  .carousel-control-prev {
+    z-index: 999;
+    position: absolute;
+    top: -7%;
+    bottom: 102% !important
+  }
+
+  .carousel-control-next {
+    z-index: 999;
+    position: absolute;
+    top: -7%;
+    bottom: 102% !important
   }
 
   #button {
     bottom: 10%;
     margin-left: 3.5%;
+  }
+
+  h3 {
+    font-size: 3rem;
+    font-family: 'Play', sans-serif;
+    letter-spacing: .2em;
+  }
+
+  .carousel-caption {
+    position: absolute;
+    bottom: 60%;
+    width: 100%;
+    left: 0%;
+    background-color: #00000066
   }
 }
 
@@ -92,9 +119,55 @@ button {
     overflow-x: hidden;
   }
 
+  button {
+    height: 300%;
+
+  }
+
   #button {
     position: relative;
     bottom: -20%;
     margin-left: 2.5%
+  }
+
+  #main_button {
+    position: absolute;
+    top: 30%;
+    margin-left: 0;
+
+  }
+
+  ngb-carousel {
+    max-width: 700px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+  }
+
+  ngb-carousel img {
+    width: 80%;
+  }
+
+  .carousel-caption {
+    width: 80%;
+    bottom: 55%;
+  }
+
+
+  h3 {
+    font-size: 2.5rem;
+    font-family: 'Play', sans-serif;
+    letter-spacing: .2em;
+  }
+
+  .btn-secondary {
+    background-color: rgb(124, 122, 122);
+    box-shadow: 1px 1px 5px rgb(235, 235, 235);
+  }
+
+  .btn-secondary:hover {
+    background-color: rgb(187, 7, 52);
+    text-decoration: none;
   }
 }
