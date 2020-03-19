@@ -2,11 +2,54 @@
 html,
 body {
   background-image: url(assets/img/background-abstract-1065003_1280.jpg);
+  height: 100%
 }
 
 @media screen and (min-width:961px) {
+
+
   .carousel-indicators {
     position: absolute;
-    bottom: -2%;
+    top: -7%;
+    z-index: 999;
+  }
+
+  .carousel-control-prev {
+    z-index: 999;
+    position: absolute;
+    top: -7%;
+    bottom: 102% !important
+  }
+
+  .carousel-control-next {
+    z-index: 999;
+    position: absolute;
+    top: -7%;
+    bottom: 102% !important
+  }
+
+}
+
+@media screen and (min-width:1280px) {
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    left: 10%
+  }
+
+  .carousel-indicators {
+    top: 90%;
+  }
+
+  .carousel-control-prev {
+    top: 0;
+    bottom: 0 !important;
+    left: -6%;
+  }
+
+  .carousel-control-next {
+    top: 0;
+    bottom: 0 !important;
+    right: -6%;
   }
 }
