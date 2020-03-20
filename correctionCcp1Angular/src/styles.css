@@ -5,6 +5,24 @@ body {
   height: 100%
 }
 
+body {
+  margin: 0;
+  padding: 1%;
+  box-sizing: border-box;
+  height: 100%;
+  font-family: 'Quicksand';
+  font-size: 14px;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+
+
+.carousel-inner {
+  width: 104%;
+}
+
+
 @media screen and (min-width:961px) {
 
 

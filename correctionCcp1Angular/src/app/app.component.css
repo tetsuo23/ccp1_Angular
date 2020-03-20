@@ -28,21 +28,15 @@ ngb-carousel {
 .carousel-item.active {
   opacity: 1;
   visibility: visible;
-  z-index: 10;
+
 }
 
-.carousel-control-prev {
-  z-index: 20;
-}
+.carousel-control-prev {}
 
 
-.carousel-control-next {
-  z-index: 20;
-}
+.carousel-control-next {}
 
-.carousel-indicators {
-  z-index: 20;
-}
+.carousel-indicators {}
 
 /* burger */
 
@@ -199,6 +193,7 @@ body {
   font-family: 'Quicksand';
   font-size: 14px;
   overflow-x: hidden;
+  width: 100%;
 }
 
 h1 {
@@ -211,7 +206,7 @@ h1 {
 
 h2 {
   text-align: center;
-  text-decoration: underline;
+
   font-weight: bold;
   font-size: 1.7rem;
 }
@@ -222,6 +217,7 @@ h2 {
   overflow-y: scroll;
   overflow-x: hidden;
   padding: 0;
+
 }
 
 #page2 {
@@ -250,7 +246,7 @@ h2 {
 
 /* -------------------------------------- */
 .nav {
-  width: 100%;
+  width: 98%;
   height: 55px;
   position: fixed;
   line-height: 65px;
@@ -258,6 +254,8 @@ h2 {
   vertical-align: middle;
   background-color: #00000066;
   z-index: 2;
+  padding: 5px;
+  margin-right: 3%;
 }
 
 .nav_scroll {
@@ -279,7 +277,8 @@ h2 {
 .nav div.main_list {
   height: 64px;
   float: right;
-  padding: 0;
+  padding: 5px;
+  margin-right: 3%;
 
 }
 
@@ -407,6 +406,8 @@ h2 {
   box-shadow: 1px 1px 10px #fff;
 }
 
+
+
 a {
   color: rgb(235, 235, 235)
 }
@@ -422,7 +423,9 @@ a {
 
   .nav div.main_list {
     padding-top: 2%;
+
   }
+
 
   .nav div.main_list ul li {
     padding-left: 1.5rem;
