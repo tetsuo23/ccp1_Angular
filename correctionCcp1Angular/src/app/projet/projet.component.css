@@ -43,3 +43,15 @@ p {
 .light img {
   height: 200px;
 }
+
+.btn-secondary {
+  background-color: rgb(124, 122, 122);
+  box-shadow: 1px 1px 5px rgb(235, 235, 235);
+}
+
+@media screen and (min-width:1280px) {
+  .btn-secondary:hover {
+    background-color: rgb(187, 7, 52);
+    text-decoration: none;
+  }
+}
