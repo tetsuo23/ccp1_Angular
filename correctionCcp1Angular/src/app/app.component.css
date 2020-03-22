@@ -401,10 +401,7 @@ h2 {
   padding-right: 30px;
 }
 
-.btn-secondary {
-  background-color: rgb(124, 122, 122);
-  box-shadow: 1px 1px 10px #fff;
-}
+
 
 
 
@@ -418,7 +415,7 @@ a {
 
 @media screen and (min-width:961px) {
   .nav {
-    height: 80px;
+    height: 15%;
   }
 
   .nav div.main_list {
@@ -455,11 +452,11 @@ a {
 
 @media screen and (min-width:1280px) {
   h1 {
-    top: 50%;
+    top: 20%;
   }
 
   .nav {
-    height: 100px;
+    height: 10%;
     z-index: 999;
   }
 
@@ -479,4 +476,13 @@ a {
   }
 
   .nav_button:hover {}
+
+  .nav div.main_list {
+    padding-top: 1%;
+
+  }
+
+  #logo {
+    width: 70%;
+  }
 }
