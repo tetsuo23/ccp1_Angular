@@ -1,3 +1,8 @@
+<script src="../assets/js/classie.js"></script>
+<script src="../assets/js/demo7.js"></script>
+<script src="../assets/js/modernizr.js"></script>
+
+
 <div class="container-fluid" id="page1">
   <nav class="nav">
     <div class="container" id="nav1">
@@ -9,20 +14,20 @@
         <ul class="navlinks ">
           <li>
 
-            <a href="https://twitter.com/">
+            <a href="https://twitter.com/" target="_blank" (click)="handleClick($event)" class>
               <img src="../assets/img/twitter.png" class="img-fluid icone" alt="twitter" srcset="../assets/img/twitter.png 1x">
             </a>
           </li>
           <li>
-            <a href="https://www.facebook.com/">
+            <a href="https://www.facebook.com/" target="_blank">
               <img src="../assets/img/facebook.png" class="img-fluid icone" alt="facebook" srcset="../assets/img/facebook.png 1x"></a>
           </li>
           <li>
-            <a href="https://fr.linkedin.com/">
+            <a href="https://fr.linkedin.com/" target="_blank">
               <img src="../assets/img/linkedin.png" class="img-fluid icone" alt="linkedin" srcset="../assets/img/linkedin.png 1x"></a>
           </li>
           <li>
-            <a href="https://www.youtube.com/">
+            <a href="https://www.youtube.com/" target="_blank">
               <img src="../assets/img/youtube.png" class="img-fluid icone" alt="youtube" srcset="../assets/img/youtube.png 1x"></a>
           </li>
           <li>
@@ -180,7 +185,7 @@
 <app-recrutement></app-recrutement>
 <app-contact></app-contact>
 <app-projet></app-projet>
-<app-work-in-progress></app-work-in-progress>
+
 <div class="container-fluid" id="page10">
   <!-- Footer -->
   <footer class="page-footer font-small indigo" id="pageEnd">
@@ -308,5 +313,7 @@
   </footer>
   <!-- Footer -->
 </div>
+<app-work-in-progress></app-work-in-progress>
+
 
 <router-outlet></router-outlet>

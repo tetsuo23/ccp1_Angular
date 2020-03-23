@@ -230,7 +230,6 @@ h2 {
   position: relative;
   height: 32%;
   padding: 0;
-  top: 1200px;
 }
 
 #pageEnd {
@@ -253,7 +252,7 @@ h2 {
   text-align: center;
   vertical-align: middle;
   background-color: #00000066;
-  z-index: 2;
+  z-index: 80;
   padding: 5px;
   margin-right: 3%;
 }
@@ -279,7 +278,7 @@ h2 {
   float: right;
   padding: 5px;
   margin-right: 3%;
-
+  z-index: 99;
 }
 
 .nav div.main_list ul {
@@ -457,7 +456,7 @@ a {
 
   .nav {
     height: 10%;
-    z-index: 999;
+
   }
 
   #page1 {
@@ -475,7 +474,10 @@ a {
 
   }
 
-  .nav_button:hover {}
+  .nav div.main_list ul li actif {
+    transform: scale(1.5);
+    color: #fff;
+  }
 
   .nav div.main_list {
     padding-top: 1%;

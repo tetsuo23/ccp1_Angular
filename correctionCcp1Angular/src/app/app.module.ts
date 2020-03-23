@@ -11,6 +11,8 @@ import { RecrutementComponent } from './recrutement/recrutement.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjetComponent } from './projet/projet.component';
 import { WorkInProgressComponent } from './work-in-progress/work-in-progress.component';
+import { ModalComponent } from './modal/modal.component';
+
 
 @NgModule({
   declarations: [
@@ -20,13 +22,14 @@ import { WorkInProgressComponent } from './work-in-progress/work-in-progress.com
     RecrutementComponent,
     ContactComponent,
     ProjetComponent,
-    WorkInProgressComponent
+    WorkInProgressComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

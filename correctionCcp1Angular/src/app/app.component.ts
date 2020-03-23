@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HostListener } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,8 +10,12 @@ import { HostListener } from '@angular/core';
 export class AppComponent {
   title = 'correctionCcp1Angular';
 
-  @HostListener('window:scroll', ['$event'])
 
+
+
+
+  @HostListener('window:scroll', ['$event'])
+  // --------------------------------------------background-color de la nav---------------------------
   onWindowScroll(e) {
     let element = document.querySelector('.nav');
     if (window.pageYOffset > element.clientHeight) {
@@ -19,4 +24,7 @@ export class AppComponent {
       element.classList.remove('nav_scroll');
     }
   }
+
+  // -----------------------------------menu-burger-------------------------------
+
 }
