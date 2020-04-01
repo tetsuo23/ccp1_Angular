@@ -5,7 +5,7 @@ const express = require('express'),
   mongoose = require('mongoose'),
   config = require('./DB');
 memberRoute = require('./routes/member.route');
-// postRoute = require('./routes/post.route');
+contactRoute = require('./routes/contact.route');
 mongoose.Promise = global.Promise;
 mongoose.connect(config.DB, {
   useUnifiedTopology: true,
@@ -23,7 +23,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 app.use('/members', memberRoute);
-// app.use('/posts', postRoute);
+app.use('/contact', contactRoute);
 const port = process.env.PORT || 4000;
 const server = app.listen(port, function () {
 

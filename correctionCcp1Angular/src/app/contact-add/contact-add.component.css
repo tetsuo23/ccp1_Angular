@@ -1,0 +1,31 @@
+#page5 {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 1%;
+  margin: 0;
+  background-color: rgb(235, 235, 235);
+  width: 70vw;
+  height: 85vh;
+}
+
+.card {
+  padding: 0;
+  border-bottom: 1px solid #333;
+  margin-bottom: 5%;
+  height: 71%;
+  margin-left: 0;
+  background-color: rgb(124, 122, 122);
+  ;
+}
+
+.hand img {
+  height: 120px;
+  padding-bottom: 2%;
+}
+
+/* .hand {
+  padding-right: 5%;
+  padding-bottom: 5%;
+} */

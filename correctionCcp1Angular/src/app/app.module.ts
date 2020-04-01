@@ -17,6 +17,9 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MemberService } from './member.service';
 import { MemberAddComponent } from './member-add/member-add.component';
+import { ContactAddComponent } from './contact-add/contact-add.component';
+
+import { ContactService } from './contact.service';
 
 
 
@@ -32,6 +35,7 @@ import { MemberAddComponent } from './member-add/member-add.component';
     WorkInProgressComponent,
     MemberComponent,
     MemberAddComponent,
+    ContactAddComponent,
 
   ],
   imports: [
@@ -43,7 +47,7 @@ import { MemberAddComponent } from './member-add/member-add.component';
     ReactiveFormsModule
   ],
   providers: [
-    MemberService,
+    MemberService, ContactService
   ],
   bootstrap: [AppComponent]
 })
