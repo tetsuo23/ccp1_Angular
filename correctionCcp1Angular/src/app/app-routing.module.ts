@@ -5,7 +5,8 @@ import { RecrutementComponent } from './recrutement/recrutement.component';
 import { CardComponent } from './card/card.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { MemberComponent } from './member/member.component';
-import { MemberAddComponent } from './member-add/member-add.component'
+import { MemberAddComponent } from './member-add/member-add.component';
+import { ContactAddComponent } from './contact-add/contact-add.component';
 
 
 
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'member/create',
     component: MemberAddComponent
+  },
+  {
+    path: 'contact/create',
+    component: ContactAddComponent
   }
 ];
 

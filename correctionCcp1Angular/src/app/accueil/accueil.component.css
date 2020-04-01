@@ -66,6 +66,7 @@ button {
   background-color: rgb(124, 122, 122);
   box-shadow: 1px 1px 5px rgb(235, 235, 235);
   border: 1px solid black;
+  z-index: 999;
 }
 
 @media screen and (min-width:961px) {
@@ -87,7 +88,7 @@ button {
   .carousel-indicators {
     position: absolute;
     top: -7%;
-    z-index: 999;
+    z-index: 990;
   }
 
   .carousel-control-prev {
@@ -107,6 +108,7 @@ button {
   #button {
     bottom: 10%;
     margin-left: 3.5%;
+    z-index: 990;
   }
 
   h3 {

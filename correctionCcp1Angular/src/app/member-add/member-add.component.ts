@@ -17,13 +17,14 @@ export class MemberAddComponent implements OnInit {
   createForm() {
     this.angForm = this.fb.group({
       'MemberName': ['', Validators.required],
-      'MemberBio': ['', Validators.required],
+      'Pseudo': ['', Validators.required],
+      'Password': ['', Validators.required],
       'MemberAge': ['', Validators.required],
       'MemberMail': ['', Validators.required]
     });
   }
-  addMember(MemberName: any, MemberBio: any, MemberAge: any, MemberMail: any) {
-    this.ms.addMember(MemberName, MemberBio, MemberAge, MemberMail);
+  addMember(MemberName: any, Pseudo: any, Password: any, MemberAge: any, MemberMail: any) {
+    this.ms.addMember(MemberName, Pseudo, Password, MemberAge, MemberMail);
     console.log(this.angForm.controls['MemberName']);
 
     this.router.navigate(['/']);

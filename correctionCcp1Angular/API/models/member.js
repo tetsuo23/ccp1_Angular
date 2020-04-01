@@ -5,7 +5,11 @@ let Member = new Schema({
   MemberName: {
     type: String
   },
-  MemberBio: {
+  Pseudo: {
+    type: String
+
+  },
+  Password: {
     type: String
 
   },

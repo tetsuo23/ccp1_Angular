@@ -1,4 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+/* font-sizes -> 14px = 0.875rem -> paragraphe
+              -> 22px = 1.375rem -> h1 */
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
 html,
 body {
   background-image: url(assets/img/background-abstract-1065003_1280.jpg);
@@ -12,19 +16,29 @@ body {
   /* box-sizing: border-box; */
   height: 100%;
   font-family: 'Quicksand';
-  font-size: 14px;
+  font-size: 0.875rem;
   overflow-x: hidden;
   width: 100%;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-family: play;
+  /* font-weight: bolder; */
+  margin: 1%;
+  text-align: center;
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 2rem;
+  }
 }
 
 h2 {
   font-size: 1.5rem;
   font-family: play;
-  font-weight: bolder;
-  margin: 1%;
-  text-align: center;
 }
-
 
 
 .carousel-inner {

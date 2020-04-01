@@ -1,50 +1,25 @@
-<!--  <div class="container justify-content-center col-12 " id="page5">
-  <div class="row">
-    <legend class="col-10 align-self-end text-left">
-      <h2>&lt; h2 &gt; Contactez-nous &lt; /h2 &gt;</h2>
-    </legend>
-    <div class="col-2 hand">
-      <img src="../../assets/img/good2.png" alt="" srcset="">
-    </div>
+<div class="container-fluid " id="page_connexion">
+  <div class="card col-12" id="connexion">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <td>Name</td>
+          <td>Mail</td>
+          <td colspan="2">Actions</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let contact of contact; let i = index">
+          <td>{{ contact.Name }}</td>
+          <td>{{ contact.Mail }}</td>
+          <td>{{ contact.Contact }}</td>
+
+          <td><a [routerLink]="['/edit', contact._id]" class="btn btn-secondary">Edit</a></td>
+
+          <td><a (click)="deleteContact(contact._id, i)" class="btn btn-danger">Delete</a></td>
+
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <div class="row">
-    <div class="col-8 offset-2" id="rdv">
-      <div class="well well-sm">
-        <form class="form-horizontal" action="" method="">
-          <fieldset id="rendez">
-
-            <div class="form-group">
-              <label class="col-md-3 control-label" for="name">Name</label>
-              <div class="col-md-9">
-                <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
-              </div>
-            </div>
-
-
-            <div class="form-group">
-              <label class="col-md-3 control-label" for="email">Your E-mail</label>
-              <div class="col-md-9">
-                <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
-              </div>
-            </div>
-
-
-            <div class="form-group">
-              <label class="col-md-3 control-label" for="message">Your message</label>
-              <div class="col-md-9">
-                <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
-              </div>
-            </div>
-
-
-            <div class="form-group">
-              <div class="col-md-12 text-center">
-                <button type="submit" class="btn btn-secondary btn-lg">Submit</button>
-              </div>
-            </div>
-          </fieldset>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>  -->
+</div>
