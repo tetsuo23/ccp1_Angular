@@ -9,42 +9,50 @@
         <ul class="navlinks ">
           <li>
 
-            <a href="https://twitter.com/">
+            <a href="https://twitter.com/" target="_blank">
               <img src="../assets/img/twitter.png" class="img-fluid icone" alt="twitter" srcset="../assets/img/twitter.png 1x">
             </a>
           </li>
           <li>
-            <a href="https://www.facebook.com/">
+            <a href="https://www.facebook.com/" target="_blank">
               <img src="../assets/img/facebook.png" class="img-fluid icone" alt="facebook" srcset="../assets/img/facebook.png 1x"></a>
           </li>
           <li>
-            <a href="https://fr.linkedin.com/">
+            <a href="https://fr.linkedin.com/" target="_blank">
               <img src="../assets/img/linkedin.png" class="img-fluid icone" alt="linkedin" srcset="../assets/img/linkedin.png 1x"></a>
           </li>
           <li>
-            <a href="https://www.youtube.com/">
+            <a href="https://www.youtube.com/" target="_blank">
               <img src="../assets/img/youtube.png" class="img-fluid icone" alt="youtube" srcset="../assets/img/youtube.png 1x"></a>
           </li>
+          <!-- ------------ modal---------------- -->
           <li>
             <a href="#">
               <img src="../assets/img/burger.png" class="img-fluid icone" id="menu-burger" alt="menu" srcset="../assets/img/burger.png 1x">
             </a>
           </li>
+          <!-- ------------ modal---------------- -->
           <li>
             <a href="#" onclick="apparait()">
               <img src="../assets/img/search.png" class="img-fluid search_menu icone" id="search" alt="" srcset="../assets/img/search.png"></a>
           </li>
-          <li><a href="#">
+          <li class="nav-item" routerLinkActive="active">
+            <a href="#" class="nav-link" routerLink="member">
+              <img src="../assets/img/logo_utilisateur.png" class="img-fluid icone" alt="menu" srcset="../assets/img/logo_utilisateur.png 1x">
+            </a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a href="#" class="nav-link" routerLink="member/create">
               <img src="../assets/img/logo_utilisateur.png" class="img-fluid icone" alt="menu" srcset="../assets/img/logo_utilisateur.png 1x">
             </a>
           </li>
         </ul>
       </div>
-      <span class="navTrigger d-none d-sm-block col-md-12">
-        <h1 id="titre"><strong>Webmag-agency</strong></h1>
+      <span class="navTrigger d-none d-sm-block col-md-12 d-flex align-items-center">
+        <h1 id="titre" class="d-flex align-items-center"><strong>Webmag-agency</strong></h1>
       </span>
     </div>
-
+    <router-outlet></router-outlet>
     <!-- ---------------------------- deuxième menu horizontal-------------------- -->
 
     <!-- <div class="container" id="nav3">
@@ -180,6 +188,7 @@
 <app-recrutement></app-recrutement>
 <app-contact></app-contact>
 <app-projet></app-projet>
+
 <div class="container-fluid" id="page10">
   <!-- Footer -->
   <footer class="page-footer font-small indigo" id="pageEnd">
@@ -300,7 +309,7 @@
 
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© 2020 Copyright:
-      <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+      <a href="https://tetsuo-project.firebaseapp.com/">Tetsuo-project</a>
     </div>
     <!-- Copyright -->
 
@@ -308,4 +317,10 @@
   <!-- Footer -->
 </div>
 <app-work-in-progress></app-work-in-progress>
-<router-outlet></router-outlet>
+
+
+
+<!-- <div class="mat-app-background basic-container">
+  <dialog-overview-example>loading</dialog-overview-example>
+</div>
+<span class="version-info">Current build: 9.1.3</span> -->

@@ -11,6 +11,15 @@ import { RecrutementComponent } from './recrutement/recrutement.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjetComponent } from './projet/projet.component';
 import { WorkInProgressComponent } from './work-in-progress/work-in-progress.component';
+import { MemberComponent } from './member/member.component';
+
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MemberService } from './member.service';
+import { MemberAddComponent } from './member-add/member-add.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -20,15 +29,22 @@ import { WorkInProgressComponent } from './work-in-progress/work-in-progress.com
     RecrutementComponent,
     ContactComponent,
     ProjetComponent,
-    WorkInProgressComponent
+    WorkInProgressComponent,
+    MemberComponent,
+    MemberAddComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    MemberService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

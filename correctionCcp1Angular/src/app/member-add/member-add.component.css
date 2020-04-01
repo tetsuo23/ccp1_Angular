@@ -1,0 +1,17 @@
+#page_connexion {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  width: 55vw;
+  height: 75vh;
+}
+
+/* #connexion {
+  width: 65vw;
+  height: 65vh;
+} */
+
+.card-body card {
+  width: 65vw;
+}
