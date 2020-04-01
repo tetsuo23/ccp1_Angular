@@ -197,12 +197,17 @@ body {
 }
 
 h1 {
-  font-size: 22px;
+  font-size: 1.375rem;
+  font-family: 'Roboto',
+    sans-serif;
   color: #fff;
   position: absolute;
   top: 32%;
   left: 40%;
 }
+
+
+
 
 h2 {
   text-align: center;
@@ -214,7 +219,7 @@ h2 {
 #page1 {
   height: 100%;
   margin-bottom: 45%;
-  overflow-y: scroll;
+  overflow-y: hidden;
   overflow-x: hidden;
   padding: 0;
 
@@ -401,9 +406,6 @@ h2 {
 }
 
 
-
-
-
 a {
   color: rgb(235, 235, 235)
 }
@@ -486,5 +488,17 @@ a {
 
   #logo {
     width: 70%;
+  }
+
+  #titre {
+    top: 35%;
+  }
+
+  .ligne {
+    position: absolute;
+    top: 35%;
+    left: 3%;
+
+    text-decoration: 2px line-through #fff;
   }
 }

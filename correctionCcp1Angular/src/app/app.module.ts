@@ -11,7 +11,14 @@ import { RecrutementComponent } from './recrutement/recrutement.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjetComponent } from './projet/projet.component';
 import { WorkInProgressComponent } from './work-in-progress/work-in-progress.component';
-import { ModalComponent } from './modal/modal.component';
+import { MemberComponent } from './member/member.component';
+
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { MemberService } from './member.service';
+import { MemberAddComponent } from './member-add/member-add.component';
+
+
 
 
 @NgModule({
@@ -23,15 +30,21 @@ import { ModalComponent } from './modal/modal.component';
     ContactComponent,
     ProjetComponent,
     WorkInProgressComponent,
-    ModalComponent
+    MemberComponent,
+    MemberAddComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     NgbModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    MemberService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

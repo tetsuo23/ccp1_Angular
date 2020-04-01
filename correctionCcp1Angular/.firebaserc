@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "tetsuo-project": {
+      "hosting": {
+        "correctionCcp1Angular": [
+          "tetsuo-project"
+        ]
+      }
+    }
+  }
+}
