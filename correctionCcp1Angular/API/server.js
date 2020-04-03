@@ -6,6 +6,7 @@ const express = require('express'),
   config = require('./DB');
 memberRoute = require('./routes/member.route');
 contactRoute = require('./routes/contact.route');
+connexionRoute = require('./routes/connexion.route');
 mongoose.Promise = global.Promise;
 mongoose.connect(config.DB, {
   useUnifiedTopology: true,
@@ -24,6 +25,7 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use('/members', memberRoute);
 app.use('/contact', contactRoute);
+app.use('/connexion', connexionRoute);
 const port = process.env.PORT || 4000;
 const server = app.listen(port, function () {
 

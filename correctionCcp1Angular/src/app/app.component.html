@@ -25,19 +25,13 @@
             <a href="https://www.youtube.com/" target="_blank">
               <img src="../assets/img/youtube.png" class="img-fluid icone" alt="youtube" srcset="../assets/img/youtube.png 1x"></a>
           </li>
-          <!-- ------------ modal---------------- -->
-          <li>
-            <a href="#">
-              <img src="../assets/img/burger.png" class="img-fluid icone" id="menu-burger" alt="menu" srcset="../assets/img/burger.png 1x">
-            </a>
-          </li>
-          <!-- ------------ modal---------------- -->
+
           <li>
             <a href="#" onclick="apparait()">
               <img src="../assets/img/search.png" class="img-fluid search_menu icone" id="search" alt="" srcset="../assets/img/search.png"></a>
           </li>
           <li class="nav-item" routerLinkActive="active">
-            <a href="#" class="nav-link" routerLink="member">
+            <a href="#" class="nav-link" routerLink="connexion">
               <img src="../assets/img/logo_utilisateur.png" class="img-fluid icone" alt="menu" srcset="../assets/img/logo_utilisateur.png 1x">
             </a>
           </li>
@@ -108,45 +102,66 @@
 
 </div>
 <div class="container-fluid" id="page2">
-  <div class="container-fluid d-none d-lg-block" id="card">
+  <div class="container-fluid d-none d-xl-block" id="card">
     <app-card></app-card>
   </div>
   <app-accueil></app-accueil>
-  <div class="container-fluid d-none d-md-block d-lg-none nav_button">
+  <div class="container-fluid d-none d-md-block d-xl-none nav_button">
     <div class="row  justify-content-around">
       <div class="col-md-2 col-5 button_nav">
         <a href="#pole-emploi">
-          <button type="button" class="btn btn-secondary btn-lg">prendre RDV</button>
+          <button type="button" class="btn btn-secondary btn-lg">Réalisations</button>
         </a>
       </div>
       <div class="col-md-2 offset-md-8 col-5  button_nav">
         <a href="#rendez">
-          <button type="button" class="btn btn-secondary btn-lg">prendre RDV</button>
+          <button type="button" class="btn btn-secondary btn-lg">Projets</button>
         </a>
       </div>
       <div class="col-md-2 col-5 button_nav">
         <a href="#rendez">
-          <button type="button" class="btn btn-secondary btn-lg">prendre RDV</button>
+          <button type="button" class="btn btn-secondary btn-lg">Services</button>
         </a>
       </div>
       <div class="col-md-2 offset-md-8 col-5  button_nav">
         <a href="#rendez">
-          <button type="button" class="btn btn-secondary btn-lg">prendre RDV</button>
+          <button type="button" class="btn btn-secondary btn-lg">Design</button>
         </a>
       </div>
       <div class="col-md-2 col-5 button_nav">
         <a href="#rendez">
-          <button type="button" class="btn btn-secondary btn-lg">prendre RDV</button>
+          <button type="button" class="btn btn-secondary btn-lg">Nous connaitre</button>
         </a>
       </div>
       <div class="col-md-2 offset-md-8 col-5 button_nav">
         <a href="#rendez">
-          <button type="button" class="btn btn-secondary btn-lg">prendre RDV</button>
+          <button type="button" class="btn btn-secondary btn-lg">Co-working</button>
         </a>
       </div>
     </div>
   </div>
-  <div class="container-fluid d-block d-sm-none nav_button">
+
+
+  <div class="container-fluid d-lg-none" id="button">
+    <div class="row  justify-content-around">
+      <div class=" col-5 col-md-2 offset-md-2 offset-xl-3">
+        <a href="#page4" target="_blank">
+          <button type="button" class="btn btn-secondary btn-lg">Recrutement</button>
+        </a>
+      </div>
+      <div class=" col-5 col-md-5 offset-1 offset-xl-2">
+        <a href="#" routerLink="contact/create">
+          <button type="button" class="btn btn-secondary btn-lg">Prendre RDV</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <div class="container-fluid d-block d-md-none nav_button">
     <div class="row  justify-content-around">
       <div class="col-md-2 col-5 offset-1 button_nav">
         <a href="#pole-emploi">
@@ -188,7 +203,8 @@
 <app-recrutement></app-recrutement>
 <app-contact></app-contact>
 <app-projet></app-projet>
-
+<app-prestations></app-prestations>
+<app-google></app-google>
 <div class="container-fluid" id="page10">
   <!-- Footer -->
   <footer class="page-footer font-small indigo" id="pageEnd">
@@ -207,16 +223,57 @@
 
           <ul class="list-unstyled">
             <li>
-              <a href="#!">Very long link 1</a>
+              <a href="#!">Mentions légales</a>
             </li>
             <li>
-              <a href="#!">Very long link 2</a>
+              <a href="#!">FAQ</a>
             </li>
             <li>
-              <a href="#!">Very long link 3</a>
+              <a href="#!">A propos</a>
             </li>
             <li>
+              <a href="#!">CGU</a>
+            </li>
+            <li>
+              <a href="#!">Politique de confidentialité</a>
+            </li>
+            <!-- <li>
               <a href="#!">Very long link 4</a>
+            </li> -->
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <hr class="clearfix w-100 d-md-none">
+
+        <!-- Grid column -->
+        <div class="col-md-3 mx-auto">
+
+          <!-- Links -->
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Prestations</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <a href="#page6">Gestion de projet</a>
+            </li>
+            <li>
+              <a href="#page6">Web design</a>
+            </li>
+            <li>
+              <a href="#page6">Web marketing</a>
+            </li>
+            <li>
+              <a href="#page6">Référencement naturel</a>
+            </li>
+            <li>
+              <a href="#page6">Développement Web</a>
+            </li>
+            <li>
+              <a href="#page6">Identité visuel</a>
+            </li>
+            <li>
+              <a href="#page6">Création projet</a>
             </li>
           </ul>
 
@@ -229,77 +286,66 @@
         <div class="col-md-3 mx-auto">
 
           <!-- Links -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Services</h5>
 
           <ul class="list-unstyled">
             <li>
-              <a href="#!">Link 1</a>
+              <a href="#page6">Refonte de site</a>
             </li>
             <li>
-              <a href="#!">Link 2</a>
+              <a href="#page6">Création avec CMS</a>
             </li>
             <li>
-              <a href="#!">Link 3</a>
+              <a href="#page6">Site e-commerce</a>
             </li>
             <li>
-              <a href="#!">Link 4</a>
+              <a href="#page6">Site vitrine</a>
             </li>
+            <li>
+              <a href="#!">Responsive design</a>
+            </li>
+            <li>
+              <a href="#!">Paiement en ligne</a>
+            </li>
+
           </ul>
 
         </div>
         <!-- Grid column -->
 
         <hr class="clearfix w-100 d-md-none">
-
-        <!-- Grid column -->
         <div class="col-md-3 mx-auto">
 
           <!-- Links -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
+          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Le site</h5>
 
           <ul class="list-unstyled">
             <li>
-              <a href="#!">Link 1</a>
+              <a href="#page6">Projets</a>
             </li>
             <li>
-              <a href="#!">Link 2</a>
+              <a href="#page4">Recrutement</a>
             </li>
             <li>
-              <a href="#!">Link 3</a>
+              <a href="#" routerLink="contact/create">Contact</a>
             </li>
             <li>
-              <a href="#!">Link 4</a>
+              <a href="#">Connexion</a>
             </li>
+            <li>
+              <a href="#" routerLink="member/create">Inscription</a>
+            </li>
+            <li>
+              <a href="#">Responsive design</a>
+            </li>
+            <li>
+              <a href="#!">Paiement en ligne</a>
+            </li>
+
           </ul>
 
         </div>
-        <!-- Grid column -->
 
-        <hr class="clearfix w-100 d-md-none">
-
-        <!-- Grid column -->
-        <div class="col-md-3 mx-auto">
-
-          <!-- Links -->
-          <h5 class="font-weight-bold text-uppercase mt-3 mb-4">Links</h5>
-
-          <ul class="list-unstyled">
-            <li>
-              <a href="#!">Link 1</a>
-            </li>
-            <li>
-              <a href="#!">Link 2</a>
-            </li>
-            <li>
-              <a href="#!">Link 3</a>
-            </li>
-            <li>
-              <a href="#!">Link 4</a>
-            </li>
-          </ul>
-
-        </div>
-        <!-- Grid column -->
 
       </div>
       <!-- Grid row -->

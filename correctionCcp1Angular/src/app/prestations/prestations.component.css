@@ -1,0 +1,56 @@
+#page7 {
+  height: 230vh;
+  margin-top: 10%;
+
+  padding: 0;
+  background-image: url(../../assets/img/presta2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  box-sizing: border-box;
+}
+
+
+.presta {
+  border: 1px solid #333;
+  background-color: #00000088;
+  margin: 1%;
+}
+
+.presta2 {
+  border: 1px solid #333;
+  background-color: #000000BB;
+  margin: 1%;
+  color: rgb(235, 235, 235);
+  border-radius: 1%;
+}
+
+.presta2 img {
+  width: 100%;
+
+}
+
+#presta {
+  margin: 0;
+}
+
+
+.prestation img {
+  height: 200px;
+
+}
+
+#page6 {
+  padding: 0;
+  padding-top: 10%;
+  margin: 0;
+  height: 200vh;
+  width: 100%;
+  background-image: url(../../assets/img/curve-design-futuristic-lines-50H.png);
+  background-size: cover;
+  background-attachment: fixed;
+  box-sizing: border-box;
+}
+
+.btn-secondary {
+  margin-bottom: 5%;
+}

@@ -68,3 +68,23 @@ export class ContactAddComponent implements OnInit {
   ngOnInit(): void {
   }
 }
+
+export class ConnexionComponent implements OnInit {
+  angForm: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.createForm();
+  }
+  createForm() {
+    this.angForm = this.fb.group({
+      Pseudo: ['', Validators.required],
+      Password: ['', Validators.required,
+
+        Validators.pattern('^[a-z0-9.-]+@[a-z0-9.-]+\.[a-z]{2,4}$')]
+    });
+
+  }
+
+  ngOnInit(): void {
+  }
+}

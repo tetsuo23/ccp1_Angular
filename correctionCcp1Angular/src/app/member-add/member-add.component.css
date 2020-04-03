@@ -1,13 +1,14 @@
-#page_connexion {
+#page_inscription {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, 10%);
   width: 55vw;
   height: 75vh;
+  overflow-y: auto;
 }
 
-#connexion {
+#inscription {
   background-color: rgb(124, 122, 122);
 }
 
@@ -29,4 +30,10 @@
 label {
   font-family: play;
   font-size: 1.2rem;
+}
+
+.porte2 img {
+  height: 80px;
+  padding-top: 2%;
+  box-shadow: transparent;
 }

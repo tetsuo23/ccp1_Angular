@@ -36,6 +36,10 @@ const routes: Routes = [
   {
     path: 'contact/create',
     component: ContactAddComponent
+  },
+  {
+    path: 'connexion',
+    component: ConnexionComponent
   }
 ];
 

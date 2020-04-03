@@ -14,7 +14,7 @@
   padding: 0;
   border-bottom: 1px solid #333;
   margin-bottom: 5%;
-  height: 71%;
+  height: 340%;
   margin-left: 0;
   background-color: rgb(124, 122, 122);
   ;
@@ -29,3 +29,18 @@
   padding-right: 5%;
   padding-bottom: 5%;
 } */
+#page5 {
+  z-index: 999;
+  height: 75vh;
+  overflow-y: auto;
+}
+
+@media screen and (min-width:961px) {
+  .hand img {
+    height: 80px;
+  }
+
+  .card {
+    height: 110%;
+  }
+}

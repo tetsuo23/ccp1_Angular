@@ -400,7 +400,7 @@ h2 {
 }
 
 .button_nav {
-  height: 30vh;
+  height: 25vh;
   padding-left: 0;
   padding-right: 30px;
 }
@@ -414,7 +414,22 @@ a {
   max-width: 2em;
 } */
 
+#button {
+  position: absolute;
+  bottom: 10%;
+  width: 100%;
+  margin-left: 2%;
+  padding-left: 0;
+}
+
+
 @media screen and (min-width:961px) {
+  #button {
+    bottom: 10%;
+    margin-left: 3.5%;
+
+  }
+
   .nav {
     height: 15%;
   }
@@ -446,19 +461,24 @@ a {
   }
 
   .nav_button {
-    top: 22%;
+    top: 25%;
   }
 }
 
 
-@media screen and (min-width:1280px) {
+@media screen and (min-width:1200px) {
   h1 {
     top: 20%;
   }
 
   .nav {
-    height: 10%;
+    height: 10% !important;
 
+  }
+
+  .nav_scroll {
+    background-color: rgb(156, 155, 155);
+    height: 10%;
   }
 
   #page1 {

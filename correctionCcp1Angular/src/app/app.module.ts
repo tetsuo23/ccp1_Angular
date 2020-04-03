@@ -18,8 +18,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { MemberService } from './member.service';
 import { MemberAddComponent } from './member-add/member-add.component';
 import { ContactAddComponent } from './contact-add/contact-add.component';
+import { ConnexionComponent } from './connexion/connexion.component'
 
 import { ContactService } from './contact.service';
+import { PrestationsComponent } from './prestations/prestations.component';
+import { GoogleComponent } from './google/google.component';
+import { ConnexionService } from './connexion.service';
 
 
 
@@ -36,6 +40,9 @@ import { ContactService } from './contact.service';
     MemberComponent,
     MemberAddComponent,
     ContactAddComponent,
+    PrestationsComponent,
+    GoogleComponent,
+    ConnexionComponent
 
   ],
   imports: [
@@ -47,7 +54,7 @@ import { ContactService } from './contact.service';
     ReactiveFormsModule
   ],
   providers: [
-    MemberService, ContactService
+    MemberService, ContactService, ConnexionService
   ],
   bootstrap: [AppComponent]
 })
