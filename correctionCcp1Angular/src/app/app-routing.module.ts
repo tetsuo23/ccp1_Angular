@@ -7,6 +7,7 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { MemberComponent } from './member/member.component';
 import { MemberAddComponent } from './member-add/member-add.component';
 import { ContactAddComponent } from './contact-add/contact-add.component';
+import { SearchComponent } from './search/search.component';
 
 
 
@@ -40,7 +41,12 @@ const routes: Routes = [
   {
     path: 'connexion',
     component: ConnexionComponent
+  },
+  {
+    path: 'search',
+    component: SearchComponent
   }
+
 ];
 
 @NgModule({

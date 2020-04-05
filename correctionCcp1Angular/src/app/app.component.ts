@@ -25,7 +25,7 @@ export class AppComponent {
 
 
 
-  // -----------------------------------formulaire d'inscription-------------------------------
+
 
 }
 export class MemberAddComponent implements OnInit {
@@ -88,3 +88,4 @@ export class ConnexionComponent implements OnInit {
   ngOnInit(): void {
   }
 }
+

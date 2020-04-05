@@ -25,6 +25,7 @@ import { PrestationsComponent } from './prestations/prestations.component';
 import { GoogleComponent } from './google/google.component';
 import { ConnexionService } from './connexion.service';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { SearchComponent } from './search/search.component';
 
 
 
@@ -44,7 +45,8 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     PrestationsComponent,
     GoogleComponent,
     ConnexionComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    SearchComponent
 
   ],
   imports: [
