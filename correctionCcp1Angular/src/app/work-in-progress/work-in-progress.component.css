@@ -11,10 +11,10 @@
 
 .block5 {
   position: relative;
-  width: 330px;
-  height: 230px;
-  right: 40%;
-  top: 15%;
+  width: 177px;
+  height: 79px;
+  right: 245%;
+  top: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,6 +57,11 @@
   height: 26%;
   width: 200%;
   margin-top: 35%;
+}
+
+.anim {
+  width: 20%;
+  right: 25%;
 }
 
 @keyframes animate {
@@ -107,10 +112,27 @@
   }
 }
 
-@media screen and (min-width:1920px) {
+@media screen and (min-width: 961px) {
+  .block5 {
+    width: 330px;
+    height: 230px;
+    right: 140%;
+    top: 25%;
+  }
+}
+
+@media screen and (min-width:1280px) {
   #work {
     padding: 5%;
     padding-top: 25%;
 
+  }
+
+  .block5 {
+
+    width: 330px;
+    height: 230px;
+    right: 80%;
+    top: 15%;
   }
 }

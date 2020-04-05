@@ -24,6 +24,7 @@ import { ContactService } from './contact.service';
 import { PrestationsComponent } from './prestations/prestations.component';
 import { GoogleComponent } from './google/google.component';
 import { ConnexionService } from './connexion.service';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 
 
@@ -42,7 +43,8 @@ import { ConnexionService } from './connexion.service';
     ContactAddComponent,
     PrestationsComponent,
     GoogleComponent,
-    ConnexionComponent
+    ConnexionComponent,
+    SearchBarComponent
 
   ],
   imports: [

@@ -35,11 +35,7 @@ h4 {
   font-family: play;
 }
 
-@include media-breakpoint-up(md) {
-  html {
-    font-size: 2rem;
-  }
-}
+
 
 h2 {
   font-size: 1.5rem;
@@ -55,6 +51,10 @@ h2 {
   z-index: 999;
 }
 
+.btn-secondary {
+  box-shadow: 1px 1px 15px rgb(235, 235, 235);
+  border: 1px solid white
+}
 
 @media screen and (min-width:961px) {
   h2 {

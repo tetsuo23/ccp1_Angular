@@ -1,5 +1,5 @@
 #page7 {
-  height: 230vh;
+  height: 650vh;
   margin-top: 10%;
 
   padding: 0;
@@ -39,18 +39,34 @@
 
 }
 
-#page6 {
-  padding: 0;
-  padding-top: 10%;
-  margin: 0;
-  height: 200vh;
-  width: 100%;
-  background-image: url(../../assets/img/curve-design-futuristic-lines-50H.png);
-  background-size: cover;
-  background-attachment: fixed;
-  box-sizing: border-box;
-}
+
 
 .btn-secondary {
   margin-bottom: 5%;
+  box-shadow: 1px 1px 15px rgb(235, 235, 235);
+  border: 1px solid white
+}
+
+@media screen and (min-width:961px) {
+  #page7 {
+    height: 500vh;
+  }
+
+  .presta2 {
+    margin: 0;
+  }
+
+  .smart {
+    margin: 0;
+  }
+
+
+}
+
+@media screen and (min-width:1280px) {
+  #page7 {
+    height: 160vh;
+  }
+
+
 }
