@@ -24,8 +24,9 @@ import { ContactService } from './contact.service';
 import { PrestationsComponent } from './prestations/prestations.component';
 import { GoogleComponent } from './google/google.component';
 import { ConnexionService } from './connexion.service';
-import { SearchBarComponent } from './search-bar/search-bar.component';
-import { SearchComponent } from './search/search.component';
+import { FormsModule } from '@angular/forms';
+
+
 
 
 
@@ -45,9 +46,6 @@ import { SearchComponent } from './search/search.component';
     PrestationsComponent,
     GoogleComponent,
     ConnexionComponent,
-    SearchBarComponent,
-    SearchComponent
-
   ],
   imports: [
     BrowserModule,
@@ -55,7 +53,8 @@ import { SearchComponent } from './search/search.component';
     BrowserAnimationsModule,
     NgbModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [
     MemberService, ContactService, ConnexionService
