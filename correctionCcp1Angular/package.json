@@ -29,7 +29,7 @@
     "classie": "^1.0.0",
     "injector": "^0.5.1",
     "jquery": "^3.4.1",
-    "modernizr": "^3.9.1",
+    "modernizr": "^3.10.0",
     "ngb-modal": "^2.0.3",
     "ngx-bootstrap": "^5.5.0",
     "node": "^13.12.0",

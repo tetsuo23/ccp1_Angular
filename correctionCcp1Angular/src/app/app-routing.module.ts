@@ -8,7 +8,11 @@ import { MemberComponent } from './member/member.component';
 import { MemberAddComponent } from './member-add/member-add.component';
 import { ContactAddComponent } from './contact-add/contact-add.component';
 import { SearchComponent } from './search/search.component';
-
+import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile/profile.component';
+import { BoardUserComponent } from './board-user/board-user.component';
+import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
+import { BoardAdminComponent } from './board-admin/board-admin.component';
 
 
 
@@ -45,7 +49,13 @@ const routes: Routes = [
   {
     path: 'search',
     component: SearchComponent
-  }
+  },
+  { path: 'home', component: HomeComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: 'user', component: BoardUserComponent },
+  { path: 'mod', component: BoardModeratorComponent },
+  { path: 'admin', component: BoardAdminComponent },
+  { path: '', redirectTo: '/', pathMatch: 'full' }
 
 ];
 

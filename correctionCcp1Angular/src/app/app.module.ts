@@ -25,9 +25,14 @@ import { PrestationsComponent } from './prestations/prestations.component';
 import { GoogleComponent } from './google/google.component';
 import { ConnexionService } from './connexion.service';
 import { FormsModule } from '@angular/forms';
+// --------------block authentification----------------------
 
-
-
+import { authInterceptorProviders } from './_helpers/auth.interceptor';
+import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile/profile.component';
+import { BoardAdminComponent } from './board-admin/board-admin.component';
+import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
+import { BoardUserComponent } from './board-user/board-user.component';
 
 
 
@@ -46,6 +51,11 @@ import { FormsModule } from '@angular/forms';
     PrestationsComponent,
     GoogleComponent,
     ConnexionComponent,
+    HomeComponent,
+    ProfileComponent,
+    BoardAdminComponent,
+    BoardModeratorComponent,
+    BoardUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -57,7 +67,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   providers: [
-    MemberService, ContactService, ConnexionService
+    MemberService, ContactService, ConnexionService, authInterceptorProviders
   ],
   bootstrap: [AppComponent]
 })

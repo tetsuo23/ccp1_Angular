@@ -5,7 +5,38 @@
         <a href="#">
           <img src="../assets/img/LOGO.png" class="img-fluid" id="logo" alt="logo" srcset="../assets/img/LOGO.png 1x"></a>
       </div>
-      <div id="mainListDiv" class="main_list col-8 col-md-5 col-xl-4 ">
+      <div class="row">
+        <span class="navTrigger d-none d-md-block col-md-6 offset-md-2 ">
+          <h1 id="titre" class="d-flex align-items-center"><strong>Webmag-agency</strong></h1>
+        </span>
+        <div id="mainListDiv" class="main_list col-8 col-md-5 col-xl-4 ">
+          <ul class="navbar-nav mr-auto navlinks" routerLinkActive="active">
+            <li>
+              <a href="https://twitter.com/" target="_blank">
+                <img src="../assets/img/twitter.png" class="img-fluid icone" alt="twitter" srcset="../assets/img/twitter.png 1x">
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/" target="_blank">
+                <img src="../assets/img/facebook.png" class="img-fluid icone" alt="facebook" srcset="../assets/img/facebook.png 1x"></a>
+            </li>
+            <li>
+              <a href="https://fr.linkedin.com/" target="_blank">
+                <img src="../assets/img/linkedin.png" class="img-fluid icone" alt="linkedin" srcset="../assets/img/linkedin.png 1x"></a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/" target="_blank">
+                <img src="../assets/img/youtube.png" class="img-fluid icone" alt="youtube" srcset="../assets/img/youtube.png 1x"></a>
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+              <a href="#" class="nav-link" routerLink="search">
+                <img src="../assets/img/search.png" class="img-fluid icone" alt="menu" srcset="../assets/img/search.png 1x">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- <div id="mainListDiv" class="main_list col-8 col-md-5 col-xl-4 ">
         <ul class="navlinks ">
           <li>
 
@@ -26,10 +57,9 @@
               <img src="../assets/img/youtube.png" class="img-fluid icone" alt="youtube" srcset="../assets/img/youtube.png 1x"></a>
           </li>
 
-          <!-- <li>
-            <a href="#" onclick="apparait()">
+          
               <img src="../assets/img/search.png" class="img-fluid search_menu icone" id="search" alt="" srcset="../assets/img/search.png"></a>
-          </li> -->
+          </li> 
           <li class="nav-item" routerLinkActive="active">
             <a href="#" class="nav-link" routerLink="connexion">
               <img src="../assets/img/logo_utilisateur.png" class="img-fluid icone" alt="menu" srcset="../assets/img/logo_utilisateur.png 1x">
@@ -40,17 +70,57 @@
               <img src="../assets/img/search.png" class="img-fluid icone" alt="menu" srcset="../assets/img/search.png 1x">
             </a>
           </li>
-          <!-- <li class="nav-item" routerLinkActive="active">
-            <a href="#" class="nav-link" routerLink="member/create">
+          
               <img src="../assets/img/logo_utilisateur.png" class="img-fluid icone" alt="menu" srcset="../assets/img/logo_utilisateur.png 1x">
             </a>
-          </li> -->
+          </li>
+        </ul>
+      </div> -->
+      <!-- start auth--------------------------------------------------------- -->
+      <div class="main_list col-8 col-md-5 col-xl-4 d-flex flex-row-reverse">
+        <ul class="navbar-nav mr-auto navlinks" routerLinkActive="active">
+
+          <li class="nav-item" *ngIf="showAdminBoard">
+            <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
+          </li>
+          <li class="nav-item" *ngIf="showModeratorBoard">
+            <a href="/mod" class="nav-link" routerLink="mod">Moderator Board</a>
+          </li>
+          <li class="nav-item">
+            <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
+          </li>
+          <li class="nav-item">
+            <a href="/home" class="nav-link" routerLink="/">Home </a>
+          </li>
+        </ul>
+        <ul *ngIf="!isLoggedIn">
+          <li class="nav-item">
+            <a href="#" class="nav-link" routerLink="member/create">Sign Up</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" routerLink="connexion">Login</a>
+          </li>
+        </ul>
+
+        <!-- <ul>
+
+
+        </ul> -->
+
+
+
+
+
+        <ul class="navbar-nav ml-auto d-flex flex-row-reverse" *ngIf="isLoggedIn">
+          <li class="nav-item">
+            <a href class="nav-link" (click)="logout()">LogOut</a>
+          </li>
         </ul>
       </div>
-      <span class="navTrigger d-none d-md-block col-md-12 ">
-        <h1 id="titre" class="d-flex align-items-center"><strong>Webmag-agency</strong></h1>
-      </span>
+      <!-- end auth ---------------------------------------------------------- -->
+
     </div>
+
     <router-outlet></router-outlet>
     <!-- ---------------------------- deuxième menu horizontal-------------------- -->
 

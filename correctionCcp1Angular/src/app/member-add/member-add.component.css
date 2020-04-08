@@ -24,7 +24,7 @@
 }
 
 .card-body card {
-  width: 65vw;
+  width: 45vw;
 }
 
 label {
@@ -36,4 +36,8 @@ label {
   height: 80px;
   padding-top: 2%;
   box-shadow: transparent;
+}
+
+.card {
+  background-color: transparent
 }

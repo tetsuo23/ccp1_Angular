@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HostListener } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { TokenStorageService } from './_services/token-storage.service';
 
 
 @Component({
@@ -9,7 +10,39 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+
+  // start auth----------------------------------------
+
+  private roles: string[];
+  isLoggedIn = false;
+  showAdminBoard = false;
+  showModeratorBoard = false;
+  username: string;
+
+  constructor(private tokenStorageService: TokenStorageService) { }
+
+  ngOnInit() {
+    this.isLoggedIn = !!this.tokenStorageService.getToken();
+
+    if (this.isLoggedIn) {
+      const user = this.tokenStorageService.getUser();
+      this.roles = user.roles;
+
+      this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
+      this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
+
+      this.username = user.username;
+    }
+  }
+
+  logout() {
+    this.tokenStorageService.signOut();
+    window.location.reload();
+  }
+
+  // end auth --------------------------------------------------
+
   title = 'correctionCcp1Angular';
 
   @HostListener('window:scroll', ['$event'])
@@ -22,6 +55,7 @@ export class AppComponent {
       element.classList.remove('nav_scroll');
     }
   }
+
 
 
 

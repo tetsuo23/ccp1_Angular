@@ -314,7 +314,6 @@ a {
   #button {
     bottom: 10%;
     margin-left: 3.5%;
-
   }
 
   .nav {
@@ -323,12 +322,9 @@ a {
 
   .nav div.main_list {
     padding-top: 2%;
-
   }
 
-
   .nav div.main_list ul li {
-    padding-left: 1.5rem;
     height: 75px;
   }
 
@@ -350,6 +346,8 @@ a {
   .nav_button {
     top: 25%;
   }
+
+
 }
 
 
@@ -360,6 +358,12 @@ a {
 @media screen and (min-width:1200px) {
   h1 {
     top: 20%;
+  }
+
+  #mainListDiv {
+    margin: 0;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
   .nav {
@@ -405,4 +409,7 @@ a {
     top: 35%;
   }
 
+  .icone {
+    height: 50%;
+  }
 }

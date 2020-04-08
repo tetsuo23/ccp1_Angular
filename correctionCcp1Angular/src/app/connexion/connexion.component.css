@@ -37,3 +37,7 @@ label {
   padding-top: 2%;
   box-shadow: transparent;
 }
+
+.card {
+  background-color: transparent
+}
