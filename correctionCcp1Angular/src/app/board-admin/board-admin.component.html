@@ -1,11 +1,61 @@
-<div class="container">
-  <header class="jumbotron">
-    <p>{{ content }}</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex id, nisi iste ipsam, deserunt iure ad fuga, ea rerum quia vel labore pariatur sapiente numquam autem. Ab excepturi ducimus quidem,
-      necessitatibus porro eum alias nihil qui recusandae nesciunt obcaecati voluptatem aliquam autem enim consequuntur est iure dignissimos. Eius sunt hic illo et rerum. Accusantium quos, vero earum
-      commodi maiores voluptatibus repellat numquam doloremque fuga, qui magni nemo odit laboriosam temporibus nostrum cum enim ad deleniti illum atque excepturi alias quas! Optio quaerat possimus est
-      sed exercitationem eligendi suscipit. Molestiae ut earum cupiditate! Maxime natus esse dolore provident officia. Dolores est molestias explicabo iure? Vero dignissimos praesentium earum ex
-      necessitatibus a, nulla autem laboriosam dolorem cupiditate facilis suscipit, tempore ab sit laudantium mollitia aut omnis in quaerat. Numquam neque nemo harum quia veniam doloribus officiis
-      eveniet exercitationem aliquid beatae, maiores autem eaque vitae vero recusandae nisi ab cum, dolore, omnis sunt?</p>
-  </header>
-</div>
+<div class="container-fluid" id="admin">
+  <div id="page-wrapper">
+    <div id="wrapper">
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="adjust-nav">
+          <div class="row d-flex justify-content-around">
+            <div class="col-lg-4">
+              <h2>ADMIN DASHBOARD</h2>
+            </div>
+
+            <div class="col-lg-8 d-flex align-self-center">
+
+              <div class="col-lg-3 col-md-2 col-sm-2 col-xs-6">
+                <div class="btn btn-secondary">
+                  <a href="#" routerLink="members">
+                    <i class="fa fa-circle-o-notch fa-5x"></i>
+                    <h4>Members</h4>
+                  </a>
+                </div>
+
+
+              </div>
+
+              <div class="col-lg-3 col-md-2 col-sm-2 col-xs-6">
+                <div class="btn btn-secondary">
+                  <a href="blank.html">
+                    <i class="fa fa-envelope-o fa-5x"></i>
+                    <h4>Projet</h4>
+                  </a>
+                </div>
+
+
+              </div>
+              <div class="col-lg-3 col-md-2 col-sm-2 col-xs-6">
+                <div class="btn btn-secondary">
+                  <a href="blank.html">
+                    <i class="fa fa-lightbulb-o fa-5x"></i>
+                    <h4>Blog</h4>
+                  </a>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <button class="btn btn-secondary" [routerLink]="['/']">
+                  <img src="../../assets/img/cross.png" alt="" srcset="../../assets/img/cross.png 1x">
+                </button>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="page-inner">
+
+
+        <!-- /. PAGE INNER  -->
+      </div>
+      <!-- /. PAGE WRAPPER  -->
+
+    </div>
+  </div>

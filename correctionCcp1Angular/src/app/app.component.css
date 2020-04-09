@@ -114,13 +114,17 @@ h2 {
   text-align: center;
   vertical-align: middle;
   background-color: #00000066;
-  z-index: 80;
+  z-index: 800;
   padding: 5px;
   margin-right: 3%;
 }
 
 .nav_scroll {
   background-color: rgb(156, 155, 155);
+}
+
+.nav_scroll2 {
+  background-color: #6C805C;
 }
 
 .nav div.logo {
@@ -140,7 +144,7 @@ h2 {
   float: right;
   padding: 5px;
   margin-right: 3%;
-  z-index: 99;
+
 }
 
 .nav div.main_list ul {
@@ -168,11 +172,15 @@ h2 {
 
 }
 
+.main_list {
+  margin-right: 5%;
+}
+
 .icone {
   vertical-align: top;
   margin-top: 22%;
   height: 40%;
-  z-index: 5;
+
 
 }
 
@@ -193,30 +201,30 @@ h2 {
 
 #nav1 {
   height: 64px;
-  z-index: 9999;
+
 }
 
-#nav2 {
+.nav2 {
 
   right: 0;
-  height: 100%;
-  width: 5%;
+  height: 5%;
+  width: 100%;
   /*! max-width: 5%; */
   min-width: 5rem;
-  background-color: #00000066;
-  padding-top: 7%;
+  background-color: #000000BB;
+  margin-top: 5.6%;
 
   /*! padding-bottom: 7%; */
 }
 
 #nav3 {
   background-color: #ffffff11;
-  z-index: 2;
+
   height: 10%;
 }
 
 .navbar-nav {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
@@ -294,6 +302,10 @@ a {
   left: -20%;
   z-index: 999;
   animation: search 1s;
+}
+
+.nav2_text {
+  padding-top: 1%;
 }
 
 @keyframes search {
@@ -379,6 +391,7 @@ a {
   #page1 {
     margin: 0;
     height: 30vh;
+
   }
 
   #page2 {
@@ -411,5 +424,40 @@ a {
 
   .icone {
     height: 50%;
+  }
+
+  a {
+    z-index: 1;
+  }
+
+  p {
+    text-shadow: 1px 1px 10px black;
+    font-size: 1.1rem;
+  }
+
+  .nav2 {
+
+    right: 0;
+    height: 5%;
+    width: 98%;
+    /*! max-width: 5%; */
+    min-width: 5rem;
+    background-color: #00000033;
+    margin-top: 5.6%;
+    margin-right: 1%;
+
+  }
+
+  .nav_scroll2 {
+    background-color: #6C805C;
+    z-index: 99;
+  }
+
+  .nav2 li {
+    z-index: 900;
+  }
+
+  #nav_text {
+    z-index: 9999;
   }
 }

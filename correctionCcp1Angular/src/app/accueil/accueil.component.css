@@ -141,9 +141,10 @@ button {
   ngb-carousel {
     max-width: 700px;
     position: absolute;
-    top: 35%;
+    top: 40%;
     left: 47%;
     transform: translate(-50%, -40%);
+    width: 50%;
   }
 
   ngb-carousel img {

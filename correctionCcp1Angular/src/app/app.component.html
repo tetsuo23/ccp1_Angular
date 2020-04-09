@@ -6,7 +6,7 @@
           <img src="../assets/img/LOGO.png" class="img-fluid" id="logo" alt="logo" srcset="../assets/img/LOGO.png 1x"></a>
       </div>
       <div class="row">
-        <span class="navTrigger d-none d-md-block col-md-6 offset-md-2 ">
+        <span class="navTrigger d-none d-md-block col-md-7 offset-md-1 ">
           <h1 id="titre" class="d-flex align-items-center"><strong>Webmag-agency</strong></h1>
         </span>
         <div id="mainListDiv" class="main_list col-8 col-md-5 col-xl-4 ">
@@ -77,46 +77,7 @@
         </ul>
       </div> -->
       <!-- start auth--------------------------------------------------------- -->
-      <div class="main_list col-8 col-md-5 col-xl-4 d-flex flex-row-reverse">
-        <ul class="navbar-nav mr-auto navlinks" routerLinkActive="active">
 
-          <li class="nav-item" *ngIf="showAdminBoard">
-            <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
-          </li>
-          <li class="nav-item" *ngIf="showModeratorBoard">
-            <a href="/mod" class="nav-link" routerLink="mod">Moderator Board</a>
-          </li>
-          <li class="nav-item">
-            <a href="/user" class="nav-link" *ngIf="isLoggedIn" routerLink="user">User</a>
-          </li>
-          <li class="nav-item">
-            <a href="/home" class="nav-link" routerLink="/">Home </a>
-          </li>
-        </ul>
-        <ul *ngIf="!isLoggedIn">
-          <li class="nav-item">
-            <a href="#" class="nav-link" routerLink="member/create">Sign Up</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link" routerLink="connexion">Login</a>
-          </li>
-        </ul>
-
-        <!-- <ul>
-
-
-        </ul> -->
-
-
-
-
-
-        <ul class="navbar-nav ml-auto d-flex flex-row-reverse" *ngIf="isLoggedIn">
-          <li class="nav-item">
-            <a href class="nav-link" (click)="logout()">LogOut</a>
-          </li>
-        </ul>
-      </div>
       <!-- end auth ---------------------------------------------------------- -->
 
     </div>
@@ -126,30 +87,57 @@
 
 
   </nav>
+  <div class="nav2" id="nav2">
+    <div class="row d-flex ">
+      <div class="col-xl-5 offset-xl-7">
+        <ul *ngIf="!isLoggedIn">
+          <div class="row d-flex justify-content-end nav2_text">
+
+            <a href="#" class="nav-link col-xl-3" routerLink="member/create">
+              <p>Sign Up</p>
+            </a>
 
 
-  <!--<div id="nav2" class="navbar justify-content-center">
-  <nav class="navbar col-2 "> 
-  
-  <a class="nav-link" href="#" onclick="block()">
-    <img src="../assets/img/point_menu.png" class="img-fluid point_menu" id="" alt="point_menu" srcset="../assets/img/point_menu.png 1x"></a>
-  <a class="nav-link" href="#" onclick="block2()">
-    <img src="../assets/img/point_menu.png" class="img-fluid point_menu" id="" alt="point_menu" srcset="../assets/img/point_menu.png 1x"></a>
-  <a class="nav-link" href="#" onclick="block3()">
-    <img src="../assets/img/point_menu.png" class="img-fluid point_menu" id="" alt="point_menu" srcset="../assets/img/point_menu.png 1x"></a>
-  <a class="nav-link" href="#" onclick="block4()">
-    <img src="../assets/img/point_menu.png" class="img-fluid point_menu" id="" alt="point_menu" srcset="../assets/img/point_menu.png 1x"></a>
+            <a href="#" class="nav-link col-xl-2" routerLink="connexion">
+              <p>Login</p>
+            </a>
 
+          </div>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-5 offset-xl-7">
+        <ul class="navbar-nav mr-auto navlinks col-xl-8 offset-xl-4" routerLinkActive="active">
 
+          <div class="row d-flex justify-content-end nav2_text">
+            <li class="nav-item col-xl-6" *ngIf="showAdminBoard">
+              <a href="/admin" class="nav-link" routerLink="admin">
+                <p>Admin Board</p>
+              </a>
+            </li>
+            <li class="nav-item col-xl-7" *ngIf="showModeratorBoard">
+              <a href="/mod" class="nav-link" routerLink="mod">
+                <p>Moderator Board</p>
+              </a>
+            </li>
+            <li class="nav-item col-xl-2" *ngIf="isLoggedIn">
+              <a href="/home" class="nav-link" routerLink="/">
+                <p>Home</p>
+              </a>
+            </li>
+            <li class="nav-item col-xl-3" *ngIf="isLoggedIn">
+              <a href class="nav-link" (click)="logout()">
+                <p>LogOut</p>
+              </a>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
 
-</nav> 
-</div>-->
-  <!--<div id="search_bar">
-  <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search">
-    <button class="btn btn-secondary" type="submit">Chercher</button>
-  </form>
-</div>-->
+  </div>
+
 
 
 
@@ -162,52 +150,52 @@
     <app-card></app-card>
   </div>
   <app-accueil></app-accueil>
-  <div class="container-fluid d-none d-md-block d-xl-none nav_button">
+  <div class="container-fluid d-none d-md-block d-xl-none nav_a">
     <div class="row  justify-content-around">
-      <div class="col-md-2 col-5 button_nav">
+      <div class="col-md-2 col-5 a_nav">
         <a href="#pole-emploi">
-          <button type="button" class="btn btn-secondary btn-lg">Réalisations</button>
+          <a type="a" class="btn btn-secondary btn-lg">Réalisations</a>
         </a>
       </div>
-      <div class="col-md-2 offset-md-8 col-5  button_nav">
+      <div class="col-md-2 offset-md-8 col-5  a_nav">
         <a href="#rendez">
-          <button type="button" class="btn btn-secondary btn-lg">Projets</button>
+          <a type="a" class="btn btn-secondary btn-lg">Projets</a>
         </a>
       </div>
-      <div class="col-md-2 col-5 button_nav">
+      <div class="col-md-2 col-5 a_nav">
         <a href="#rendez">
-          <button type="button" class="btn btn-secondary btn-lg">Services</button>
+          <a type="a" class="btn btn-secondary btn-lg">Services</a>
         </a>
       </div>
-      <div class="col-md-2 offset-md-8 col-5  button_nav">
+      <div class="col-md-2 offset-md-8 col-5  a_nav">
         <a href="#rendez">
-          <button type="button" class="btn btn-secondary btn-lg">Design</button>
+          <a type="a" class="btn btn-secondary btn-lg">Design</a>
         </a>
       </div>
-      <div class="col-md-2 col-5 button_nav">
+      <div class="col-md-2 col-5 a_nav">
         <a href="#rendez">
-          <button type="button" class="btn btn-secondary btn-lg">Nous connaitre</button>
+          <a type="a" class="btn btn-secondary btn-lg">Nous connaitre</a>
         </a>
       </div>
-      <div class="col-md-2 offset-md-8 col-5 button_nav">
+      <div class="col-md-2 offset-md-8 col-5 a_nav">
         <a href="#rendez">
-          <button type="button" class="btn btn-secondary btn-lg">Co-working</button>
+          <a type="a" class="btn btn-secondary btn-lg">Co-working</a>
         </a>
       </div>
     </div>
   </div>
 
 
-  <div class="container-fluid d-lg-none" id="button">
+  <div class="container-fluid d-lg-none" id="a">
     <div class="row  justify-content-around">
       <div class=" col-5 col-md-2 offset-md-2 offset-xl-3">
         <a href="#page4" target="_blank">
-          <button type="button" class="btn btn-secondary btn-lg">Recrutement</button>
+          <a type="a" class="btn btn-secondary btn-lg">Recrutement</a>
         </a>
       </div>
       <div class=" col-5 col-md-5 offset-1 offset-xl-2">
         <a href="#" routerLink="contact/create">
-          <button type="button" class="btn btn-secondary btn-lg">Prendre RDV</button>
+          <a type="a" class="btn btn-secondary btn-lg">Prendre RDV</a>
         </a>
       </div>
     </div>
@@ -217,36 +205,36 @@
 
 
 
-  <div class="container-fluid d-block d-md-none nav_button">
+  <div class="container-fluid d-block d-md-none nav_a">
     <div class="row  justify-content-around">
-      <div class="col-md-2 col-5 offset-1 button_nav">
+      <div class="col-md-2 col-5 offset-1 a_nav">
         <a href="#pole-emploi">
-          <button type="button" class="btn btn-secondary btn-lg">Réalisations</button>
+          <a type="a" class="btn btn-secondary btn-lg">Réalisations</a>
         </a>
       </div>
-      <div class="col-md-2 offset-md-8 col-5  button_nav">
+      <div class="col-md-2 offset-md-8 col-5  a_nav">
         <a href="#rendez">
-          <button type="button" class="btn btn-secondary btn-lg">Projets</button>
+          <a type="a" class="btn btn-secondary btn-lg">Projets</a>
         </a>
       </div>
-      <div class="col-md-2 col-5 offset-1 button_nav">
+      <div class="col-md-2 col-5 offset-1 a_nav">
         <a href="#rendez">
-          <button type="button" class="btn btn-secondary btn-lg">Services</button>
+          <a type="a" class="btn btn-secondary btn-lg">Services</a>
         </a>
       </div>
-      <div class="col-md-2 offset-md-8 col-5  button_nav">
+      <div class="col-md-2 offset-md-8 col-5  a_nav">
         <a href="#rendez">
-          <button type="button" class="btn btn-secondary btn-lg">Design</button>
+          <a type="a" class="btn btn-secondary btn-lg">Design</a>
         </a>
       </div>
-      <div class="col-md-2 col-5 offset-1 button_nav">
+      <div class="col-md-2 col-5 offset-1 a_nav">
         <a href="#rendez">
-          <button type="button" class="btn btn-secondary btn-lg">Nous connaitre</button>
+          <a type="a" class="btn btn-secondary btn-lg">Nous connaitre</a>
         </a>
       </div>
-      <div class="col-md-2 offset-md-8 col-5 button_nav">
+      <div class="col-md-2 offset-md-8 col-5 a_nav">
         <a href="#rendez">
-          <button type="button" class="btn btn-secondary btn-lg">Co-Working</button>
+          <a type="a" class="btn btn-secondary btn-lg">Co-Working</a>
         </a>
       </div>
     </div>

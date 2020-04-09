@@ -1,13 +1,13 @@
 #page5 {
   position: absolute;
-  top: 85%;
+  top: 220%;
   left: 50%;
   transform: translate(-50%, 0);
   padding: 1%;
   margin: 0;
   background-color: rgb(235, 235, 235);
   width: 70vw;
-  height: 85vh;
+  height: 80vh;
 }
 
 .card {
@@ -42,5 +42,23 @@
 
   .card {
     height: 110%;
+  }
+}
+
+@media screen and (min-width:1280px) {
+  #form {
+    height: 100%;
+  }
+
+  #page5 {
+    height: 70vh;
+  }
+
+  textarea {
+    height: 100px;
+  }
+
+  .card {
+    height: 72%;
   }
 }

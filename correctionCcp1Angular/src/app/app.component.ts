@@ -53,6 +53,12 @@ export class AppComponent implements OnInit {
       element.classList.add('nav_scroll');
     } else {
       element.classList.remove('nav_scroll');
+    };
+    let element2 = document.querySelector('.nav2');
+    if (window.pageYOffset > element2.clientHeight) {
+      element2.classList.add('nav_scroll2');
+    } else {
+      element2.classList.remove('nav_scroll2');
     }
   }
 

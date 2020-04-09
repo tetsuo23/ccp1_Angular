@@ -31,7 +31,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'members',
+    path: 'admin/members',
     component: MemberComponent
   },
   {
