@@ -28,17 +28,7 @@ ngb-carousel {
 .carousel-item.active {
   opacity: 1;
   visibility: visible;
-
 }
-
-.carousel-control-prev {}
-
-
-.carousel-control-next {}
-
-.carousel-indicators {}
-
-
 
 html,
 body {
@@ -55,37 +45,30 @@ body {
 
 h1 {
   font-size: 1.375rem;
-  font-family: 'Roboto',
-    sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #fff;
   position: absolute;
   top: 32%;
   left: 40%;
 }
 
-
-
-
 h2 {
   text-align: center;
-
   font-weight: bold;
   font-size: 1.7rem;
 }
 
 #page1 {
-  height: 100%;
+  height: 45%;
   margin-bottom: 45%;
   overflow-y: hidden;
   overflow-x: hidden;
   padding: 0;
-
 }
 
 #page2 {
   height: 100%;
-  margin-top: 100vh;
-
+  margin-top: 0;
 }
 
 #page10 {
@@ -144,7 +127,6 @@ h2 {
   float: right;
   padding: 5px;
   margin-right: 3%;
-
 }
 
 .nav div.main_list ul {
@@ -152,7 +134,6 @@ h2 {
   height: 64px;
   display: flex;
   list-style: none;
-  /*! padding-right: 3em; */
   padding: 0;
 }
 
@@ -169,7 +150,6 @@ h2 {
   color: #fff;
   line-height: 60px;
   font-size: 1.5rem;
-
 }
 
 .main_list {
@@ -180,8 +160,6 @@ h2 {
   vertical-align: top;
   margin-top: 22%;
   height: 40%;
-
-
 }
 
 /* modification de la première nav pour coller le logo à gauche */
@@ -201,30 +179,23 @@ h2 {
 
 #nav1 {
   height: 64px;
-
 }
 
 .nav2 {
-
   right: 0;
   height: 5%;
   width: 100%;
-  /*! max-width: 5%; */
   min-width: 5rem;
   background-color: #000000BB;
   margin-top: 5.6%;
-
-  /*! padding-bottom: 7%; */
 }
 
 #nav3 {
   background-color: #ffffff11;
-
   height: 10%;
 }
 
 .navbar-nav {
-  /* height: 100vh; */
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
@@ -236,8 +207,6 @@ h2 {
   flex-wrap: wrap;
   align-content: space-between;
   padding-bottom: 7%;
-  /*! padding-left: 1%; */
-  /*! padding-right: 1%; */
   justify-content: center;
 }
 
@@ -245,6 +214,7 @@ h2 {
   display: flex;
   justify-content: center;
   padding: 0;
+  height: 64px;
 }
 
 .navTrigger {
@@ -268,17 +238,12 @@ h2 {
   height: 25vh;
   padding-left: 0;
   padding-right: 30px;
-
 }
 
 
 a {
   color: rgb(235, 235, 235)
 }
-
-/* .search_menu {
-  max-width: 2em;
-} */
 
 #button {
   position: absolute;
@@ -290,6 +255,7 @@ a {
 
 .btn-secondary {
   box-shadow: 1px 1px 5px rgb(235, 235, 235);
+  margin-bottom: 4%;
 }
 
 
@@ -306,6 +272,16 @@ a {
 
 .nav2_text {
   padding-top: 1%;
+  height: 64px;
+}
+
+#nav_smart {
+  height: 35%;
+}
+
+.nav-item {
+  height: 20px;
+  line-height: 20px;
 }
 
 @keyframes search {
@@ -329,37 +305,64 @@ a {
   }
 
   .nav {
-    height: 15%;
+    height: 10%;
+    padding-top: 0;
   }
 
   .nav div.main_list {
-    padding-top: 2%;
+    padding-top: 1%;
   }
 
   .nav div.main_list ul li {
     height: 75px;
   }
 
-  /* #page1 {
-    height: 100vh;
-    margin-bottom: 45%;
-    overflow-y: scroll;
-    padding: 0;
-  } */
+  h1 {
+    top: 20%;
+  }
+
   #page1 {
     margin: 0;
-    height: 30vh;
+    height: 15vh;
   }
 
   #page2 {
-    margin-top: 26vh;
+    margin-top: 13vh;
   }
 
   .nav_button {
     top: 25%;
   }
 
+  .navTrigger {
+    letter-spacing: .8em;
+  }
 
+  .nav2 {
+
+    right: 0;
+    height: 5%;
+    width: 98%;
+    /*! max-width: 5%; */
+    min-width: 5rem;
+    background-color: #00000033;
+    margin-top: 5.6%;
+    margin-right: 1%;
+
+  }
+
+  .nav_scroll2 {
+    background-color: #6C805C;
+    z-index: 99;
+  }
+
+  .nav_a {
+    height: 55%;
+  }
+
+  .btn-secondary {
+    margin-bottom: 25%;
+  }
 }
 
 
@@ -435,29 +438,34 @@ a {
     font-size: 1.1rem;
   }
 
-  .nav2 {
+  /* .nav2 {
 
     right: 0;
     height: 5%;
     width: 98%;
-    /*! max-width: 5%; */
-    min-width: 5rem;
-    background-color: #00000033;
-    margin-top: 5.6%;
-    margin-right: 1%;
+    
+  min-width: 5rem;
+  background-color: #00000033;
+  margin-top: 5.6%;
+  margin-right: 1%;
 
-  }
+}
 
-  .nav_scroll2 {
-    background-color: #6C805C;
-    z-index: 99;
-  }
+.nav_scroll2 {
+  background-color: #6C805C;
+  z-index: 99;
+}
 
+*/
   .nav2 li {
     z-index: 900;
   }
 
   #nav_text {
     z-index: 9999;
+  }
+
+  .navTrigger {
+    letter-spacing: 1em;
   }
 }

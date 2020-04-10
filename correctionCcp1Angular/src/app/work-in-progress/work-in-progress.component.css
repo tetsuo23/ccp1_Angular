@@ -11,7 +11,7 @@
 
 .block5 {
   position: relative;
-  width: 177px;
+  width: 120px;
   height: 79px;
   right: 245%;
   top: 60%;
@@ -116,23 +116,27 @@
   .block5 {
     width: 330px;
     height: 230px;
-    right: 140%;
+    right: 200%;
     top: 25%;
   }
+
+  #work {
+    margin-top: 5%;
+
+  }
+
 }
 
 @media screen and (min-width:1280px) {
   #work {
-    padding: 5%;
-    padding-top: 25%;
-
+    margin-top: 0
   }
 
   .block5 {
 
     width: 330px;
     height: 230px;
-    right: 80%;
+    right: 140%;
     top: 15%;
   }
 }

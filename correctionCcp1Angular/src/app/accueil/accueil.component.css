@@ -73,7 +73,7 @@ button {
 
   .carousel-caption {
     position: absolute;
-    bottom: 35%;
+    bottom: 50%;
     left: -1%;
     background-color: #00000066
   }
@@ -99,7 +99,7 @@ button {
   }
 
   h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-family: 'Play', sans-serif;
     letter-spacing: .2em;
   }

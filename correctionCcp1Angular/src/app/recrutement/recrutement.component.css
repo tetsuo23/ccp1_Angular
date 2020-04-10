@@ -3,7 +3,7 @@
   padding-left: 1%;
   padding-top: 10%;
   margin: 0;
-  height: 600vh;
+  height: 680vh;
   background-image: url(../../assets/img/background-blank-empty-light-62693.jpg);
   background-size: cover;
   background-attachment: fixed;
@@ -38,8 +38,6 @@ h3 {
   background-color: #00000088;
   margin-top: 1%;
 }
-
-p {}
 
 .aside {
   height: 100%;
