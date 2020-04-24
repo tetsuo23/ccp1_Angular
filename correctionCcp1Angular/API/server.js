@@ -26,7 +26,7 @@ app.use(cors());
 app.use('/members', memberRoute);
 app.use('/contact', contactRoute);
 app.use('/connexion', connexionRoute);
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 8080;
 const server = app.listen(port, function () {
 
   console.log('Listening on port ' + port);
@@ -36,7 +36,8 @@ const server = app.listen(port, function () {
 const dbConfig = require("./app/config/db.config");
 
 var corsOptions = {
-  origin: "http://localhost:8081"
+  origin: "http://localhost:8081",
+  dataType: "script",
 };
 
 app.use(cors(corsOptions));
@@ -49,7 +50,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-const db = require("./app/models");
+const db = require("./models");
 const Role = db.role;
 
 db.mongoose

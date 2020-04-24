@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class ConnexionService {
 
   constructor(private http: HttpClient) { }
-  uri = 'http://localhost:4000/connexion';
+  uri = 'http://localhost:8080/connexion';
   connexion(Pseudo: any, Password: any) {
     const obj = {
       Pseudo,

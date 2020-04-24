@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { TokenStorageService } from './_services/token-storage.service';
 
-const baseUrl = "http://localhost:8080/api/users";
+
 
 @Injectable({
   providedIn: 'root'
@@ -10,11 +10,11 @@ const baseUrl = "http://localhost:8080/api/users";
 export class MemberService {
 
   constructor(private http: HttpClient, private tokenStorageService: TokenStorageService) { }
-  uri = 'http://localhost:4000/members';
+  uri = 'http://localhost:8080/members';
   baseUrl = "http://localhost:8080/api/users";
 
   getAll() {
-    return this.http.get(baseUrl);
+    return this.http.get(this.baseUrl);
   }
   // editMember(id: any) {
   //   return this

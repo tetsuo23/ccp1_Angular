@@ -33,6 +33,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { BoardUserComponent } from './board-user/board-user.component';
+import { AddComponent } from './articles/add/add.component';
+import { EditComponent } from './articles/edit/edit.component';
+import { VueComponent } from './articles/vue/vue.component';
 
 
 
@@ -56,6 +59,9 @@ import { BoardUserComponent } from './board-user/board-user.component';
     BoardAdminComponent,
     BoardModeratorComponent,
     BoardUserComponent,
+    AddComponent,
+    EditComponent,
+    VueComponent,
   ],
   imports: [
     BrowserModule,

@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class ContactService {
 
   constructor(private http: HttpClient) { }
-  uri = 'http://localhost:4000/contact';
+  uri = 'http://localhost:8080/contact';
   editContact(id: any) {
     return this
       .http
