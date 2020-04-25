@@ -57,7 +57,7 @@
 
 
 
-          <div class="row" id="nav_smart" routerLinkActive="active">
+          <!-- <div class="row" id="nav_smart" routerLinkActive="active">
 
             <li class="nav-item col-6 col-xl-6" *ngIf="showAdminBoard">
               <a href="/admin" class="nav-link" routerLink="admin">
@@ -82,7 +82,7 @@
                 <p>LogOut</p>
               </a>
             </li>
-          </div>
+          </div> -->
         </span>
       </div>
     </div>
@@ -93,7 +93,7 @@
   </nav>
   <div class="nav2 d-none d-md-block" id="nav2">
     <div class="row d-flex ">
-      <div class="col-7 offset-5 col-xl-5 offset-xl-7">
+      <div class="col-7 offset-8 col-xl-3">
         <ul *ngIf="!isLoggedIn">
           <div class="row d-flex justify-content-end nav2_text">
 
@@ -111,11 +111,11 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-7 offset-5 col-xl-5 offset-xl-7">
+      <div class="col-7 offset-9 col-xl-3" *ngIf="isLoggedIn">
         <ul class="navbar-nav mr-auto navlinks col-6 offset-6 col-xl-8 offset-xl-4" routerLinkActive="active">
 
           <div class="row d-flex justify-content-end nav2_text">
-            <li class="nav-item col-6 col-xl-6" *ngIf="showAdminBoard">
+            <li class="nav-item col-6 col-xl-6" *ngIf="isLoggedIn">
               <a href="/admin" class="nav-link" routerLink="admin">
                 <p>Admin Board</p>
               </a>
@@ -249,11 +249,13 @@
 
 
 </div>
+
 <app-recrutement></app-recrutement>
 <app-contact></app-contact>
 <app-projet></app-projet>
 <app-prestations></app-prestations>
 <app-google></app-google>
+
 <div class="container-fluid" id="page10">
   <!-- Footer -->
   <footer class="page-footer font-small indigo" id="pageEnd">

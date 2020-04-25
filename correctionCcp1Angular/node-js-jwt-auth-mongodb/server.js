@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const dbConfig = require("./app/config/db.config");
-
+const postRoute = require('./app/routes/post.routes');
 const app = express();
 
 var corsOptions = {
@@ -46,6 +46,7 @@ app.get("/", (req, res) => {
 // routes
 require("./app/routes/auth.routes")(app);
 require("./app/routes/user.routes")(app);
+// require("./app/routes/post.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
@@ -88,3 +89,4 @@ function initial() {
     }
   });
 }
+app.use('/posts', postRoute);

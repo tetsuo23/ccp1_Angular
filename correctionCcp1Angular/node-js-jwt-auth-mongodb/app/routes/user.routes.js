@@ -2,6 +2,27 @@ const {
   authJwt
 } = require("../middlewares");
 const controller = require("../controllers/user.controller");
+const express = require('express');
+const userRoutes = express.Router();
+let User = require('./../models/user.model')
+
+
+
+// Defined get data(index or listing) route
+userRoutes.route('/').get(function (req, res) {
+  User.find(function (err, users) {
+    if (err) {
+      console.log(err);
+
+    } else {
+      res.json(users);
+    }
+  });
+});
+
+
+
+
 
 module.exports = function (app) {
   app.use(function (req, res, next) {

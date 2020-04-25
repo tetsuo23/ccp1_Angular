@@ -36,7 +36,7 @@ const server = app.listen(port, function () {
 const dbConfig = require("./app/config/db.config");
 
 var corsOptions = {
-  origin: "http://localhost:8081",
+  origin: "http://localhost:8080",
   dataType: "script",
 };
 

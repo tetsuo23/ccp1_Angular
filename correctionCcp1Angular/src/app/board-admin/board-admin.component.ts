@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../_services/user.service';
 import { TokenStorageService } from './../_services/token-storage.service';
 
-
+import User from './../../../node-js-jwt-auth-mongodb/app/models';
 
 @Component({
   selector: 'app-board-admin',
@@ -18,7 +18,7 @@ export class BoardAdminComponent implements OnInit {
   password: string;
   role: string;
   user: string;
-
+  users: User[];
   constructor(private userService: UserService, private tokenStorageService: TokenStorageService) { }
 
   ngOnInit() {
@@ -34,12 +34,17 @@ export class BoardAdminComponent implements OnInit {
     if (this.isLoggedIn) {
       const user = this.tokenStorageService.getUser();
       this.username = user.username;
-      this.email = user.email;
+
       this.password = user.password;
       this.roles = user.roles;
       this.role = user.role;
 
     }
+    this.userService
+      .getUsers()
+      .subscribe((data: User[]) => {
+        this.users = data;
+      });
   }
 
 }

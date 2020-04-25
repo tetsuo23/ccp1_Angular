@@ -13,9 +13,9 @@
 
                 <div class="col-3 col-lg-3">
                   <div class="btn btn-secondary">
-                    <a href="#" routerLink="members">
+                    <a href="#" [routerLink]="['/post']">
                       <i class="fa fa-circle-o-notch fa-5x"></i>
-                      <h4>Members</h4>
+                      <h4>Blog</h4>
                     </a>
                   </div>
 
@@ -63,11 +63,10 @@
 
         </ul>
 
-
-        <app-work-in-progress></app-work-in-progress>
+        <!-- <app-post></app-post> -->
 
       </div>
-
+      <app-work-in-progress></app-work-in-progress>
 
     </div>
   </div>

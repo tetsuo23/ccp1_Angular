@@ -8,7 +8,7 @@ const API_URL = 'http://localhost:8080/api/test/';
   providedIn: 'root'
 })
 export class UserService {
-
+  uri = 'http://localhost:8080/users';
   constructor(private http: HttpClient) { }
 
   getPublicContent(): Observable<any> {
@@ -25,6 +25,11 @@ export class UserService {
 
   getAdminBoard(): Observable<any> {
     return this.http.get(API_URL + 'admin', { responseType: 'text' });
+  }
+  getUsers(): Observable<any> {
+    return this
+      .http
+      .get(`${this.uri}`);
   }
 }
 
