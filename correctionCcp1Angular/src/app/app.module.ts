@@ -34,6 +34,7 @@ import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { BoardUserComponent } from './board-user/board-user.component';
 import { PostComponent } from "./post/post.component";
+import { PostShowComponent } from './post-show/post-show.component';
 
 
 
@@ -58,6 +59,7 @@ import { PostComponent } from "./post/post.component";
     BoardModeratorComponent,
     BoardUserComponent,
     PostComponent,
+    PostShowComponent,
 
   ],
   imports: [

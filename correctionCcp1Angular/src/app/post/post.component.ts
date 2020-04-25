@@ -26,6 +26,13 @@ export class PostComponent implements OnInit {
     this.ps.addPost(title, content);
     this.router.navigate(['post']);
   }
+
+  deletePost(id: any, index: number) {
+    this.ps.deletePost(id).subscribe(res => {
+      this.posts.splice(index, 1);
+    });
+  }
+
   ngOnInit(): void {
   }
 

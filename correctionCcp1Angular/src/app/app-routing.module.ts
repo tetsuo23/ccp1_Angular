@@ -14,6 +14,7 @@ import { BoardUserComponent } from './board-user/board-user.component';
 import { BoardModeratorComponent } from './board-moderator/board-moderator.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { PostComponent } from './post/post.component';
+import { PostShowComponent } from './post-show/post-show.component';
 
 
 const routes: Routes = [
@@ -32,6 +33,10 @@ const routes: Routes = [
   {
     path: 'post',
     component: PostComponent
+  },
+  {
+    path: 'post-show',
+    component: PostShowComponent
   },
 
   {
