@@ -3,6 +3,10 @@ import { UserService } from '../_services/user.service';
 import { TokenStorageService } from './../_services/token-storage.service';
 
 import User from './../../../node-js-jwt-auth-mongodb/app/models';
+import { PostService } from '../_services/post.service';
+import Post from '../models/post';
+import { BoardAdminService } from './../_services/board-admin.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-board-admin',
@@ -19,8 +23,18 @@ export class BoardAdminComponent implements OnInit {
   role: string;
   user: string;
   users: User[];
-  constructor(private userService: UserService, private tokenStorageService: TokenStorageService) { }
+  posts: Post[];
 
+  constructor(private userService: UserService, private tokenStorageService: TokenStorageService, private bs: BoardAdminService, private ps: PostService, private router: Router) { }
+  deletePost(id: any, index: number) {
+    this.ps.deletePost(id).subscribe(res => {
+      this.posts.splice(index, 1);
+    });
+  }
+  addPost(title, content) {
+    this.ps.addPost(title, content);
+    this.router.navigate(['post']);
+  }
   ngOnInit() {
     this.userService.getAdminBoard().subscribe(
       data => {
@@ -45,6 +59,12 @@ export class BoardAdminComponent implements OnInit {
       .subscribe((data: User[]) => {
         this.users = data;
       });
+    this.bs
+      .getPosts()
+      .subscribe((data: Post[]) => {
+        this.posts = data;
+      });
+
   }
 
 }

@@ -1,5 +1,10 @@
 <div class="container-fluid d-flex align-items-center justify-content-center" id="page7">
   <div class="card mb-4" style="margin-top: 25px">
+    <div class="col-3 col-md-3">
+      <button class="btn btn-secondary" [routerLink]="['/admin']">
+        <img src="../../assets/img/cross.png" alt="" srcset="../../assets/img/cross.png 1x">
+      </button>
+    </div>
     <div class="container">
       <form [formGroup]="angForm" (submit)='addPost(title, content)'>
         <div class="form-group">
@@ -12,8 +17,8 @@
         </div>
 
 
-        <button type="button" class="float-right btn btn-warning" style="margin-bottom: 5px" [disabled]="angForm.pristine || angForm.invalid"
-          (click)="addPost(angForm.controls['title'].value, angForm.controls['content'].value)"><a href="#" [routerLink]="['/admin']">Ajouter un post</a></button>
+        <button class="float-right btn btn-warning" [disabled]="angForm.pristine || angForm.invalid" (click)="addPost(angForm.controls['title'].value, angForm.controls['content'].value)"><a href=""
+            [routerLink]="['/admin']">Ajouter un post</a></button>
       </form>
     </div>
   </div>
