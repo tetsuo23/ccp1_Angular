@@ -1,9 +1,23 @@
+#admin-main {
+  height: 600vh
+}
+
+#page9 {
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+#work {
+  height: 100vh;
+}
+
+
 #admin {
   height: 100vh;
   width: 97vw;
   position: absolute;
   top: 120%;
-  overflow-y: scroll;
+  overflow-y: hidden;
 }
 
 /* ----------------------------------------------------------- */
@@ -89,6 +103,14 @@ h4 {
 
 .block5 {
   width: 100px;
+}
+
+.table td {
+  line-height: 25px;
+}
+
+#page-inner {
+  height: 60vh;
 }
 
 /*==============================================
