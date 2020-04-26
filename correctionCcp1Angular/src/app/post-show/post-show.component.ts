@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import Post from '../models/post';
 import { PostService } from '../_services/post.service';
+import { TokenStorageService } from './../_services/token-storage.service';
 
 @Component({
   selector: 'app-post-show',
@@ -9,7 +10,10 @@ import { PostService } from '../_services/post.service';
 })
 export class PostShowComponent implements OnInit {
   posts: Post[];
-  constructor(private ps: PostService) { }
+  private roles: string[];
+  isLoggedIn = false;
+  showAdminBoard = false;
+  constructor(private ps: PostService, private tokenStorageService: TokenStorageService) { }
   deletePost(id: any, index: number) {
     this.ps.deletePost(id).subscribe(res => {
       this.posts.splice(index, 1);
@@ -22,5 +26,16 @@ export class PostShowComponent implements OnInit {
       .subscribe((data: Post[]) => {
         this.posts = data;
       });
+
+
+
+    this.isLoggedIn = !!this.tokenStorageService.getToken();
+
+    if (this.isLoggedIn) {
+      const user = this.tokenStorageService.getUser();
+      this.roles = user.roles;
+
+      this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
+    }
   }
 }

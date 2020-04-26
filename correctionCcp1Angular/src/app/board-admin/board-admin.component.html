@@ -1,79 +1,114 @@
-<div class="container-fluid" id="admin">
-  <div id="page-wrapper">
-    <div id="wrapper">
-      <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="adjust-nav">
-          <div class="row d-flex justify-content-around">
-            <div class="col-lg-4">
-              <h2>{{ username }} DASHBOARD</h2>
-            </div>
+<div class="container-fluid" id="admin-main">
+  <div class="container-fluid" id="admin">
+    <div id="page-wrapper">
+      <div id="wrapper">
+        <div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="adjust-nav">
+            <div class="row d-flex justify-content-around">
+              <div class="col-lg-4">
+                <h2>{{ username }} DASHBOARD</h2>
+              </div>
 
 
-            <div class="row">
-              <div class="col-12 d-flex align-self-center">
-
-                <div class="col-3 col-lg-3">
-                  <div class="btn btn-secondary">
-                    <a href="#" [routerLink]="['/post']">
-                      <i class="fa fa-circle-o-notch fa-5x"></i>
-                      <h4>Blog</h4>
-                    </a>
+              <div class="row">
+                <div class="col-12 d-flex align-self-center">
+                  <div class="col-3 col-lg-3">
+                    <div class="btn btn-secondary" *ngIf="isLoggedIn">
+                      <a href="#" [routerLink]="['/post']">
+                        <i class="fa fa-circle-o-notch fa-5x"></i>
+                        <h4>create</h4>
+                      </a>
+                    </div>
                   </div>
-                </div>
-                <div class="col-3 col-lg-3">
-                  <div class="btn btn-secondary">
-                    <a href="#" [routerLink]="['/post']">
-                      <i class="fa fa-circle-o-notch fa-5x"></i>
-                      <h4>Blog create</h4>
-                    </a>
-                  </div>
-                </div>
 
-                <div class="col-3 col-lg-3">
-                  <div class="btn btn-secondary">
-                    <a href="blank.html">
-                      <i class="fa fa-envelope-o fa-5x"></i>
-                      <h4>Projet</h4>
-                    </a>
+                  <div class="col-3 col-lg-3">
+                    <div class="btn btn-secondary">
+                      <a href="#page9">
+
+                        <h4>Blog</h4>
+                      </a>
+                    </div>
                   </div>
 
 
+                  <div class="col-3 col-lg-3">
+                    <div class="btn btn-secondary">
+                      <a href="blank.html">
+                        <i class="fa fa-envelope-o fa-5x"></i>
+                        <h4>Projet</h4>
+                      </a>
+                    </div>
+
+
+                  </div>
+
+                  <div class="col-3 col-md-3">
+                    <button class="btn btn-secondary" [routerLink]="['/']">
+                      <img src="../../assets/img/cross.png" alt="" srcset="../../assets/img/cross.png 1x">
+                    </button>
+                  </div>
+
+
                 </div>
-
-                <div class="col-3 col-md-3">
-                  <button class="btn btn-secondary" [routerLink]="['/']">
-                    <img src="../../assets/img/cross.png" alt="" srcset="../../assets/img/cross.png 1x">
-                  </button>
-                </div>
-
-
               </div>
             </div>
           </div>
         </div>
+        <div id="page-inner">
+          <ul>
+            <li>
+              {{ username }}
+            </li>
+          </ul>
+
+          <!-- <app-post></app-post> -->
+
+        </div>
+        <div class="container-fluid" id="page9">
+          <div class="col-3 col-lg-3">
+            <div class="btn btn-secondary" *ngIf="isLoggedIn">
+              <a href="#" [routerLink]="['/post']">
+                <i class="fa fa-circle-o-notch fa-5x"></i>
+                <h4>create</h4>
+              </a>
+            </div>
+          </div>
+          <div class="container d-flex justify-content-center">
+            <table class=" table table-hover">
+
+              <tbody>
+
+                <tr *ngFor="let post of posts; let i = index">
+                  <div class="row" id="blog">
+                    <div class=" col-xl-12 d-flex justify-content-start">
+
+                      <h3>
+                        {{ post.title }}
+                      </h3>
+
+                    </div>
+                    <td>{{ post.content }}</td>
+                    <div *ngIf="isLoggedIn">
+                      <td><a [routerLink]="['/post', post._id]" class="btn btn-primary">Edit</a></td>
+
+                      <td><a class="btn btn-danger" (click)="deletePost(post._id,i)">Delete</a></td>
+                    </div>
+                  </div>
+
+
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+        <div class="container-fluid" id="work">
+          <app-work-in-progress></app-work-in-progress>
+        </div>
       </div>
-      <div id="page-inner">
-        <ul>
-          <li>
-            {{ username }}
-          </li>
-        </ul>
-        <tbody>
-
-          <tr *ngFor="let post of posts; let i = index">
-            <td>{{ post.title }}</td>
-
-
-
-            <td><a [routerLink]="['/post', post._id]" class="btn btn-primary">Edit</a></td>
-
-            <td><a class="btn btn-danger" (click)="deletePost(post._id,i)">Delete</a></td>
-          </tr>
-        </tbody>
-        <!-- <app-post></app-post> -->
-
-      </div>
-      <app-work-in-progress></app-work-in-progress>
-
     </div>
   </div>
+
+
+
+</div>

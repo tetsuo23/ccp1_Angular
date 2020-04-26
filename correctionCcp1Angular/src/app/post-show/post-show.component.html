@@ -1,19 +1,35 @@
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <td>Titre</td>
-      <td>Content</td>
+<div class="col-3 col-lg-3">
+  <div class="btn btn-secondary" *ngIf="isLoggedIn">
+    <a href="#" [routerLink]="['/post']">
+      <i class="fa fa-circle-o-notch fa-5x"></i>
+      <h4>create</h4>
+    </a>
+  </div>
+</div>
+<div class="container">
+  <table class=" table table-hover">
+
+    <tbody>
+
+      <tr *ngFor="let post of posts; let i = index">
+        <div class="row" id=" blog">
+          <div class=" col-xl-12 d-flex justify-content-start">
+
+            <h3>
+              {{ post.title }}
+            </h3>
+
+          </div>
+          <td>{{ post.content }}</td>
+          <div *ngIf="isLoggedIn">
+            <td><a [routerLink]="['/post', post._id]" class="btn btn-primary">Edit</a></td>
+
+            <td><a class="btn btn-danger" (click)="deletePost(post._id,i)">Delete</a></td>
+          </div>
+        </div>
 
 
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let post of posts; let i = index">
-      <td>{{ post.title }}</td>
-      <td>{{ post.content }}</td>
-
-
-
-    </tr>
-  </tbody>
-</table>
+      </tr>
+    </tbody>
+  </table>
+</div>

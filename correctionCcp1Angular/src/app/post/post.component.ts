@@ -3,6 +3,7 @@ import { PostService } from './../_services/post.service';
 import Post from '../models/post';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { PostShowService } from '../_services/PostShowService';
 
 @Component({
   selector: 'app-post',
@@ -34,6 +35,12 @@ export class PostComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // this.ps
+    //   .getPosts()
+    //   .subscribe((data: Post[]) => {
+    //     this.posts = data;
+    //   });
+
   }
 
 }
